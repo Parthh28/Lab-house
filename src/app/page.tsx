@@ -1,65 +1,153 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import HeroSection from "@/components/home/HeroSection";
+import ServicesOverview from "@/components/home/ServicesOverview";
+import WhyChooseUs from "@/components/home/WhyChooseUs";
+import TestimonialSection from "@/components/home/TestimonialSection";
+import CTASection from "@/components/home/CTASection";
+import { siteConfig } from "@/config/site.config";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: `${siteConfig.name} Calibration Services | ${siteConfig.accreditation}`,
+  description:
+    `${siteConfig.accreditation} for Mechanical, Electro-Technical & Thermal Discipline. Providing excellence in Calibration, Thermal Validation & HVAC Validation since ${siteConfig.establishedYear} across India.`,
+};
+
+export default function HomePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: siteConfig.name,
+    description:
+      `${siteConfig.accreditation} for Mechanical, Electro-Technical & Thermal Discipline. Established in ${siteConfig.establishedYear} by ${siteConfig.proprietor}.`,
+    image: "https://labhouse.net/og-image.jpg",
+    "@id": "https://labhouse.net/#laboratory",
+    url: "https://labhouse.net",
+    telephone: siteConfig.telephone[0].replace(/\s+/g, ""),
+    email: siteConfig.email,
+    founder: {
+      "@type": "Person",
+      name: `${siteConfig.proprietor} (M.Sc.)`,
+      jobTitle: "Chief Executive / Technical Head",
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "207, Tirupati Trade Centre, Navghar Road",
+      addressLocality: `${siteConfig.address.street}, Dist: ${siteConfig.address.district}`,
+      addressRegion: siteConfig.address.state,
+      postalCode: "401210",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 19.3919,
+      longitude: 72.8397,
+    },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+    sameAs: [],
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      {/* Hero Section */}
+      <HeroSection />
+
+      {/* Quick Stats Bar */}
+      <section className="bg-surface-teal py-xl border-y border-border-gray">
+        <div className="max-w-7xl mx-auto px-lg md:px-xxl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-lg">
+            <div className="bg-white p-lg rounded-xl border border-border-gray shadow-[0_1px_3px_rgba(0,0,0,0.08)] flex items-center gap-md">
+              <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container shrink-0">
+                <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+                  history
+                </span>
+              </div>
+              <div>
+                <div className="font-headline-sm text-headline-sm text-on-surface font-bold">
+                  Since {siteConfig.establishedYear}
+                </div>
+                <div className="font-body-sm text-text-secondary text-xs">
+                  25+ Years of Metrology Excellence
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-lg rounded-xl border border-border-gray shadow-[0_1px_3px_rgba(0,0,0,0.08)] flex items-center gap-md">
+              <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container shrink-0">
+                <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+                  verified
+                </span>
+              </div>
+              <div>
+                <div className="font-headline-sm text-headline-sm text-on-surface font-bold">
+                  ISO/IEC 17025
+                </div>
+                <div className="font-body-sm text-text-secondary text-xs">
+                  NABL Accredited Laboratory
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-lg rounded-xl border border-border-gray shadow-[0_1px_3px_rgba(0,0,0,0.08)] flex items-center gap-md">
+              <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container shrink-0">
+                <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+                  precision_manufacturing
+                </span>
+              </div>
+              <div>
+                <div className="font-headline-sm text-headline-sm text-on-surface font-bold">
+                  37+ Master
+                </div>
+                <div className="font-body-sm text-text-secondary text-xs">
+                  Calibrated Standards &amp; Instruments
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-lg rounded-xl border border-border-gray shadow-[0_1px_3px_rgba(0,0,0,0.08)] flex items-center gap-md">
+              <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container shrink-0">
+                <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+                  timer
+                </span>
+              </div>
+              <div>
+                <div className="font-headline-sm text-headline-sm text-on-surface font-bold">
+                  2-Hour
+                </div>
+                <div className="font-body-sm text-text-secondary text-xs">
+                  Complaint &amp; Quote Guarantee
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </section>
+
+      {/* Services Overview */}
+      <ServicesOverview />
+
+      {/* Why Choose Us & ALCOA */}
+      <WhyChooseUs />
+
+      {/* Client List & Code of Ethics */}
+      <TestimonialSection />
+
+      {/* CTA Section */}
+      <CTASection
+        title="Ready to Calibrate & Validate Your Critical Instruments?"
+        subtitle={`Contact our ${siteConfig.address.street} laboratory or speak with our ${siteConfig.accreditation} specialists directly. Full ALCOA compliance guaranteed.`}
+        buttonText="Request Calibration Quote"
+        buttonHref="/contact"
+      />
     </div>
   );
 }
