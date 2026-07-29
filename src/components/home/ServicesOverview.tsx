@@ -32,7 +32,7 @@ const coreServices = [
     description:
       "Comprehensive multi-point thermal mapping and validation across critical controlled environments using high-accuracy wireless and wired data loggers traceable to national standards.",
     turnaround: "On-Site & In-House Facility",
-    traceability: "National Traceability (±0.5°C)",
+    traceability: "National/International Traceability (±0.5°C)",
     features: [
       "Area & Warehouse Temperature Mapping",
       "Walk-in type Stability Chambers (0 to 70°C, 0-100% RH)",
@@ -50,7 +50,7 @@ const coreServices = [
     description:
       "Rigorous cleanroom, laminar flow, and HVAC validation protocols utilizing calibrated Aerosol Photometers and air flow instrumentation to ensure total environmental safety.",
     turnaround: "On-Site Specialist Team",
-    traceability: "ISO & NABL Standards",
+    traceability: "ISO Standards",
     features: [
       "Airborne Particle Count (APC) Testing",
       "Filter Integrity Test (PAO / DOP Aerosol Photometer)",
@@ -163,7 +163,7 @@ export default function ServicesOverview() {
             <span className="material-symbols-outlined text-[#0F766E] text-3xl mb-2">sensors</span>
             <h4 className="font-heading font-bold text-lg text-[#121c2a]">Validation Standards</h4>
             <p className="text-xs text-[#64748B] mt-1">
-              Wireless (-40 to 70°C &amp; 0-100% RH) &amp; Wired 21 CFR Part 11 compliant data loggers (-80 to +1200°C) with national traceability.
+              Wireless (-40 to 70°C &amp; 0-100% RH) &amp; Wired 21 CFR Part 11 compliant data loggers (-80 to +1200°C) with national/international traceability.
             </p>
           </div>
           <div className="pt-4 md:pt-0 px-4">

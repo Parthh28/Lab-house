@@ -12,7 +12,7 @@ import type { NextRequest } from "next/server";
  *   - Only redirect if no valid session exists
  *   - Uncomment the Supabase auth check below when ready
  */
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Protect /admin routes — redirect to login if not authenticated

@@ -90,7 +90,7 @@ export default function HeroSection() {
                     Accredited Disciplines
                   </h3>
                   <p className="text-xs text-[#99F6E4]">
-                    National &amp; International Traceability
+                    National/International Traceability
                   </p>
                 </div>
               </div>

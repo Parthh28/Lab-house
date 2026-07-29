@@ -15,7 +15,7 @@ export default function ThermalValidationList() {
             </h2>
           </div>
           <p className="text-sm text-[--color-text-secondary] max-w-md">
-            Utilizing high-accuracy wireless data loggers (-40 to 70°C, 0-100% RH) and wired thermocouple data loggers (-80 to +1200°C) with national traceability.
+            Utilizing high-accuracy wireless data loggers (-40 to 70°C, 0-100% RH) and wired thermocouple data loggers (-80 to +1200°C) with national/international traceability.
           </p>
         </div>
 

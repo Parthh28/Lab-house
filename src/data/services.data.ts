@@ -40,7 +40,7 @@ export const calibrationParameters: CalibrationParameter[] = [
     title: "Electrical & Electro-Technical Calibration",
     icon: "bolt",
     range: "DC/AC Voltage, Current, Resistance, Frequency",
-    accuracy: "IDEMI / International Traceability",
+    accuracy: "IDEMI / National/International Traceability",
     desc: "Multi-parameter calibration for Digital Multimeters (DMMs), clamp meters, decade resistance boxes (0.01 Ω to 11.11 MΩ), power supplies, and process calibrators.",
   },
   {
