@@ -26,7 +26,7 @@ export default function HomePage() {
     email: siteConfig.email,
     founder: {
       "@type": "Person",
-      name: `${siteConfig.proprietor} (M.Sc.)`,
+      name: `${siteConfig.proprietor}`,
       jobTitle: "Chief Executive / Technical Head",
     },
     address: {

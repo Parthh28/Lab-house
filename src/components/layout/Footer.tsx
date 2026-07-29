@@ -73,7 +73,7 @@ export default function Footer() {
             <li>
               <Link
                 className="text-white/80 hover:text-[#99F6E4] transition-colors"
-                href="/contact"
+                href="/login"
               >
                 Client Portal Login
               </Link>
@@ -117,15 +117,20 @@ export default function Footer() {
               <span className="material-symbols-outlined text-[#99F6E4] text-[18px] mt-0.5">
                 location_on
               </span>
-              <span>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${siteConfig.name}, 205, Tirupati Trade Centre, Navghar Road, ${siteConfig.address.street}, ${siteConfig.address.district}, ${siteConfig.address.pincode}, ${siteConfig.address.state}, India`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#99F6E4] transition-colors"
+              >
                 205, Tirupati Trade Centre, Navghar Road, {siteConfig.address.street}, Dist: {siteConfig.address.district} – {siteConfig.address.pincode}, {siteConfig.address.state}, India
-              </span>
+              </a>
             </li>
             <li className="flex items-center gap-2.5">
               <span className="material-symbols-outlined text-[#99F6E4] text-[18px]">
                 person
               </span>
-              <span>Chief Executive: {siteConfig.proprietor} (M.Sc.)</span>
+              <span>Chief Executive: {siteConfig.proprietor}</span>
             </li>
           </ul>
         </div>
@@ -140,10 +145,10 @@ export default function Footer() {
           <Link className="hover:text-[#99F6E4] transition-colors" href="/privacy-policy">
             Privacy Policy
           </Link>
-          <Link className="hover:text-[#99F6E4] transition-colors" href="/about">
+          <Link className="hover:text-[#99F6E4] transition-colors" href="/about#code-of-ethics">
             Code of Ethics
           </Link>
-          <Link className="hover:text-[#99F6E4] transition-colors" href="/about">
+          <Link className="hover:text-[#99F6E4] transition-colors" href="/about#quality-systems">
             Quality Policy
           </Link>
         </div>

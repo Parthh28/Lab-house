@@ -16,13 +16,6 @@ export const calibrationParameters: CalibrationParameter[] = [
     desc: "NABL & ISO/IEC 17025 accredited calibration for RTD Pt-100 sensors, S-Type thermocouples, digital thermometers, dry block calibrators, and deep freezers (-80°C to 50°C).",
   },
   {
-    title: "Relative Humidity (RH) Calibration",
-    icon: "water_drop",
-    range: "10% to 95% RH (0°C to 60°C)",
-    accuracy: "ERTL (W) / International Traceable",
-    desc: "High-stability calibration for digital thermo-hygrometers, humidity indicators, stability chamber sensors, and cleanroom monitoring probes.",
-  },
-  {
     title: "Dimensional & Mechanical Calibration",
     icon: "straighten",
     range: "Up to 600 mm (L.C. 0.001 mm)",

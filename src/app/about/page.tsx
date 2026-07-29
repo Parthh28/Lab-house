@@ -128,7 +128,7 @@ export default function AboutPage() {
               Registered Office &amp; Regional Reach
             </h2>
             <p className="font-body text-[--color-text-secondary] text-base leading-relaxed">
-              Our central administration and in-house calibration facility is strategically located in Vasai (East), District Thane, serving industrial hubs across Maharashtra and nationwide.
+              Our central administration and in-house calibration facility is strategically located in Vasai (East), District Palghar, serving industrial hubs across Maharashtra and nationwide.
             </p>
 
             <div className="space-y-4 pt-2">
@@ -141,11 +141,11 @@ export default function AboutPage() {
                     Registered &amp; Administration Office
                   </h4>
                   <p className="text-sm text-[--color-text-secondary] mt-1">
-                    207, Tirupati Trade Centre, Navghar Road, {siteConfig.address.street}, Dist: {siteConfig.address.district} – {siteConfig.address.pincode}, {siteConfig.address.state}, India
+                    205, Tirupati Trade Centre, Navghar Road, {siteConfig.address.street}, Dist: {siteConfig.address.district} – {siteConfig.address.pincode}, {siteConfig.address.state}, India
                   </p>
                   <div className="flex flex-wrap gap-4 mt-2 text-xs font-semibold text-[#0F766E]">
                     <span>Phones: {siteConfig.telephone.join(" / ")}</span>
-                    <span>Admin: 7021434698</span>
+                    
                   </div>
                 </div>
               </div>

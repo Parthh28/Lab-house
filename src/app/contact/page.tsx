@@ -117,7 +117,7 @@ export default function ContactPage() {
                     Chief Executive &amp; Proprietor
                   </p>
                   <p className="font-semibold text-[#121c2a]">
-                    {siteConfig.proprietor} (M.Sc.)
+                    {siteConfig.proprietor}
                   </p>
                   <p className="text-xs text-gray-500 mt-0.5">
                     Technical Head — Established {siteConfig.establishedYear}

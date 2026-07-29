@@ -1,6 +1,6 @@
 export default function QualitySystemsSection() {
   return (
-    <section className="py-10 md:py-12 px-6 md:px-10 bg-white border-b border-gray-200">
+    <section id="quality-systems" className="py-10 md:py-12 px-6 md:px-10 bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto space-y-10">
         <div className="max-w-3xl space-y-3">
           <span className="text-[#0F766E] font-semibold text-xs uppercase tracking-wider bg-[#F0FDFA] border border-[#0F766E]/20 px-3.5 py-1 rounded-md">

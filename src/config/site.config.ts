@@ -10,8 +10,8 @@ export const siteConfig: SiteConfig = {
   email: "contact@labhouse.net",
   address: {
     street: "Vasai (E)",
-    city: "Thane",
-    district: "Thane",
+    city: "Palghar",
+    district: "Palghar",
     state: "Maharashtra",
     pincode: "401208",
   },
