@@ -26,7 +26,7 @@ export const calibrationParameters: CalibrationParameter[] = [
     title: "Weights & Weighing Scales Calibration",
     icon: "scale",
     range: "1 mg to 15 kg (E2 & F1 Class)",
-    accuracy: "National NPL/NABL Traceability",
+    accuracy: "National NPL",
     desc: "Calibration of analytical balances, precision industrial weighing scales, and mass comparators using calibrated E2 and F1 class standard stainless steel weights.",
   },
   {

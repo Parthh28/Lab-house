@@ -78,7 +78,7 @@ export default function QualitySystemsSection() {
               </div>
               <div className="flex items-center justify-between p-3 rounded-lg bg-emerald-50/70 border border-emerald-200/60">
                 <span className="font-medium text-emerald-900">Min. Customer Satisfaction Score</span>
-                <span className="font-bold text-emerald-700 bg-white px-2 py-0.5 rounded border border-emerald-300">80%+ Target</span>
+                <span className="font-bold text-emerald-700 bg-white px-2 py-0.5 rounded border border-emerald-300">90%+ Target</span>
               </div>
             </div>
           </div>

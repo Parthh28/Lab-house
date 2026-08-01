@@ -281,7 +281,8 @@ export default function QuoteForm({ initialInstrument = "" }: QuoteFormProps) {
             >
               <option value="Calibration Service">Calibration Service</option>
               <option value="HVAC">HVAC</option>
-              <option value="Thermal">Thermal</option>
+              <option value="AMC">AMC</option>
+              <option value="Temperature Mapping">Temperature Mapping</option>
             </select>
           </div>
         </div>
@@ -300,11 +301,11 @@ export default function QuoteForm({ initialInstrument = "" }: QuoteFormProps) {
           />
         </div>
 
-        <div className="pt-4 flex flex-col sm:flex-row items-center gap-5">
+        <div className="pt-4 mt-2">
           <button
             type="submit"
             disabled={loading || submitted}
-            className="bg-[#F97316] hover:bg-[#EA580C] text-white font-semibold py-3 px-8 rounded-full transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 w-full sm:w-auto flex items-center justify-center gap-2 disabled:opacity-70 disabled:hover:transform-none cursor-pointer"
+            className="bg-[#F97316] hover:bg-[#EA580C] text-white font-bold text-lg py-4 px-8 rounded-full transition-all duration-200 hover:shadow-lg hover:-translate-y-1 active:translate-y-0 w-full flex items-center justify-center gap-2 disabled:opacity-70 disabled:hover:transform-none cursor-pointer"
           >
             {loading ? (
               <>
@@ -317,10 +318,7 @@ export default function QuoteForm({ initialInstrument = "" }: QuoteFormProps) {
               <span>Submit Request</span>
             )}
           </button>
-          <span className="text-gray-500 text-sm flex items-center gap-1.5">
-            <span className="material-symbols-outlined text-[16px] text-gray-400">lock</span>
-            100% confidential scope review
-          </span>
+
         </div>
       </form>
     </div>

@@ -81,12 +81,7 @@ export default function ContactPage() {
                   >
                     {siteConfig.telephone.join(" / ")}
                   </a>
-                  <a
-                    className="text-xs text-[#0F766E] font-medium mt-1 hover:underline block"
-                    href="tel:+917021434698"
-                  >
-                    Administration / Marketing: +91 7021434698
-                  </a>
+
                 </div>
               </li>
 

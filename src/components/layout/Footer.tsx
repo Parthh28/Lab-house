@@ -5,12 +5,10 @@ export default function Footer() {
   return (
     <footer className="bg-[#0F766E] text-white py-10 px-6 md:px-10 border-t border-white/10 font-body-sm mt-auto">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-white/20">
-        {/* Company Info (5 cols) */}
-        <div className="md:col-span-5 md:pr-8 md:border-r md:border-white/20">
+        {/* Company Info (7 cols) */}
+        <div className="md:col-span-7 md:pr-10 md:border-r md:border-white/20">
           <div className="flex items-center gap-2 mb-3">
-            <span className="material-symbols-outlined text-[#99F6E4] text-2xl">
-              science
-            </span>
+            <img src="/logo.png" alt="Lab House Logo" className="h-8 w-8 object-contain rounded-sm bg-white p-0.5" />
             <span className="font-headline-sm font-bold text-xl text-white tracking-tight">
               {siteConfig.name}
             </span>
@@ -32,56 +30,8 @@ export default function Footer() {
             </span>
           </div>
         </div>
-        {/* Quick Links (3 cols) */}
-        <div className="md:col-span-3 md:px-8 md:border-r md:border-white/20">
-          <h4 className="font-headline-sm font-semibold text-white text-[16px] mb-4 tracking-wide">
-            Quick Links
-          </h4>
-          <ul className="space-y-2.5 text-[14px]">
-            <li>
-              <Link
-                className="text-white/80 hover:text-[#99F6E4] transition-colors"
-                href="/"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="text-white/80 hover:text-[#99F6E4] transition-colors"
-                href="/services"
-              >
-                Services &amp; Scope
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="text-white/80 hover:text-[#99F6E4] transition-colors"
-                href="/about"
-              >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="text-white/80 hover:text-[#99F6E4] transition-colors"
-                href="/contact"
-              >
-                Contact &amp; Quote
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="text-white/80 hover:text-[#99F6E4] transition-colors"
-                href="/login"
-              >
-                Client Portal Login
-              </Link>
-            </li>
-          </ul>
-        </div>
-        {/* Contact (4 cols) */}
-        <div className="md:col-span-4 md:pl-8">
+        {/* Contact (5 cols) */}
+        <div className="md:col-span-5 md:pl-10">
           <h4 className="font-headline-sm font-semibold text-white text-[16px] mb-4 tracking-wide">
             Contact Us
           </h4>
@@ -102,15 +52,12 @@ export default function Footer() {
                 call
               </span>
               <div>
-                <a
+                  <a
                   className="hover:text-[#99F6E4] transition-colors block font-medium"
                   href={`tel:${siteConfig.telephone[0].replace(/\s+/g, "")}`}
                 >
                   {siteConfig.telephone.join(" / ")}
                 </a>
-                <span className="text-[12px] text-white/60">
-                  Admin: +91 7021434698
-                </span>
               </div>
             </li>
             <li className="flex items-start gap-2.5">

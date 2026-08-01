@@ -7,7 +7,7 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
     highlight: "2-Hour Response Guarantee",
     description:
       "We respond to customer inquiries and complaints within two working hours of receipt, and provide comprehensive review and clarification within 2 working days.",
-    stats: "80%+ Customer Satisfaction Objective",
+    stats: "90%+ Customer Satisfaction Objective",
   },
   {
     icon: "verified_user",
