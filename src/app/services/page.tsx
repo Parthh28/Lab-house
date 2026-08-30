@@ -3,6 +3,7 @@
 import { useState } from "react";
 import CTASection from "@/components/home/CTASection";
 import ServicesTabsNav from "@/components/services/ServicesTabsNav";
+import NablScopeSection from "@/components/services/NablScopeSection";
 import CalibrationScopeList from "@/components/services/CalibrationScopeList";
 import ThermalValidationList from "@/components/services/ThermalValidationList";
 import HvacValidationList from "@/components/services/HvacValidationList";
@@ -10,7 +11,7 @@ import MasterInstrumentsTable from "@/components/services/MasterInstrumentsTable
 import { siteConfig } from "@/config/site.config";
 
 export default function ServicesPage() {
-  const [activeTab, setActiveTab] = useState("calibration");
+  const [activeTab, setActiveTab] = useState("nabl");
 
   return (
     <div className="flex-grow">
@@ -22,10 +23,10 @@ export default function ServicesPage() {
             <span>{siteConfig.accreditation} Scope</span>
           </div>
           <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
-            Accredited Calibration &amp; Validation Scope
+            Accredited NABL Scope &amp; Services
           </h1>
           <p className="font-body text-white/90 text-sm sm:text-base max-w-3xl leading-relaxed">
-            Operating under strict ALCOA quality principles, Lab House maintains 37+ specialized master instruments across Calibration, Thermal Validation, and Cleanroom HVAC Testing.
+            Operating under ISO/IEC 17025:2017 accreditation (Certificate CC-4341) and ALCOA+ data integrity principles across Permanent Laboratory and Site Facilities.
           </p>
         </div>
         <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none w-72 h-72 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white to-transparent rounded-full translate-x-1/3 translate-y-1/3" />
@@ -34,16 +35,19 @@ export default function ServicesPage() {
       {/* Main Tab Navigation Bar */}
       <ServicesTabsNav activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      {/* Tab 1: Calibration Scope */}
+      {/* Tab 1: NABL Scope in Services & Accredited Parameter Table */}
+      {activeTab === "nabl" && <NablScopeSection />}
+
+      {/* Tab 2: Calibration Scope */}
       {activeTab === "calibration" && <CalibrationScopeList />}
 
-      {/* Tab 2: Thermal Validation */}
+      {/* Tab 3: Thermal Validation */}
       {activeTab === "thermal" && <ThermalValidationList />}
 
-      {/* Tab 3: HVAC Cleanroom Validation */}
+      {/* Tab 4: HVAC Cleanroom Validation */}
       {activeTab === "hvac" && <HvacValidationList />}
 
-      {/* Tab 4: Master Instruments Table */}
+      {/* Tab 5: Master Instruments Table */}
       {activeTab === "instruments" && <MasterInstrumentsTable />}
 
       {/* Bottom Quote CTA */}

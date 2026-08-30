@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     "Lab House",
   ],
   authors: [{ name: "Lab House Calibration Services" }],
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: "Lab House — Precision Calibration Services",
     description:

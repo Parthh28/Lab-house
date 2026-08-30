@@ -9,7 +9,14 @@ export default function SplashScreen() {
   const [isRevealed, setIsRevealed] = useState(false);
 
   useEffect(() => {
+    // Only show splash screen once per browser session
+    const hasSeenSplash = sessionStorage.getItem("labhouse_splash_seen");
+    if (hasSeenSplash) {
+      return;
+    }
+
     setIsVisible(true);
+    sessionStorage.setItem("labhouse_splash_seen", "true");
     
     // Trigger the reveal fill animation slightly after mount
     const revealTimer = setTimeout(() => {
