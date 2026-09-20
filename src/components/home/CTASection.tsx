@@ -21,7 +21,7 @@ export default function CTASection({
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(153,246,228,0.12),transparent_60%)] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto text-center space-y-8 relative z-10">
-        <span className="inline-flex items-center gap-2 bg-white/10 text-[#99F6E4] text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full border border-white/20">
+        <span className="inline-flex items-center gap-2 bg-white/15 text-teal-200 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full border border-white/25">
           <span className="material-symbols-outlined text-[16px]">
             verified_user
           </span>
@@ -32,7 +32,7 @@ export default function CTASection({
           {title}
         </h2>
 
-        <p className="font-body text-white/90 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
+        <p className="font-body text-white text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
           {subtitle}
         </p>
 
@@ -54,21 +54,21 @@ export default function CTASection({
           </Link>
         </div>
 
-        <div className="pt-8 border-t border-white/15 flex flex-wrap justify-center gap-8 text-xs sm:text-sm text-white/80">
+        <div className="pt-8 border-t border-white/15 flex flex-wrap justify-center gap-8 text-xs sm:text-sm text-white font-medium">
           <div className="flex items-center gap-2">
-            <span className="material-symbols-outlined text-[#99F6E4] text-base">
+            <span className="material-symbols-outlined text-teal-200 text-base">
               timer
             </span>
             <span>2-Hour Quote Guarantee</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="material-symbols-outlined text-[#99F6E4] text-base">
+            <span className="material-symbols-outlined text-teal-200 text-base">
               local_shipping
             </span>
             <span>Free Instrument Pickup & Return Available</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="material-symbols-outlined text-[#99F6E4] text-base">
+            <span className="material-symbols-outlined text-teal-200 text-base">
               verified
             </span>
             <span>Complete Audit Readiness</span>

@@ -13,11 +13,11 @@ export default function Badge({
 }: BadgeProps) {
   const variants = {
     accent:
-      "bg-[#99F6E4] text-[#005c55] font-semibold",
+      "bg-[#99F6E4] text-[#003732] font-bold",
     white:
-      "bg-[#99F6E4]/20 text-[#99F6E4] font-medium",
+      "bg-white/15 text-white font-semibold border border-white/25",
     success:
-      "bg-green-50 text-green-800 border border-green-200",
+      "bg-emerald-50 text-emerald-900 border border-emerald-300 font-semibold",
   };
 
   return (

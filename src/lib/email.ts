@@ -3,27 +3,19 @@ import type { QuoteRequestInput } from "./validators";
 import { siteConfig } from "@/config/site.config";
 import { supabase } from "@/lib/supabase";
 
-const resendApiKey = process.env.RESEND_API_KEY;
-const adminEmail = process.env.ADMIN_EMAIL || siteConfig.email;
-
-console.log("[Email Service] Init:", {
-  hasApiKey: !!resendApiKey,
-  apiKeyPrefix: resendApiKey ? resendApiKey.substring(0, 8) + "..." : "MISSING",
-  adminEmail,
-});
-
-const resend = resendApiKey && resendApiKey !== "your-resend-api-key"
-  ? new Resend(resendApiKey)
-  : null;
-
-console.log("[Email Service] Resend client created:", !!resend);
+// Resend client is initialized per-request in sendQuoteConfirmationEmails
+// to support dynamic environment variable updates and proper scoping.
 
 export async function sendQuoteConfirmationEmails(
   data: QuoteRequestInput,
   quoteId: string,
   customerId: string
 ): Promise<{ success: boolean; error?: string }> {
-  if (!resend) {
+  const adminEmail = process.env.ADMIN_EMAIL || siteConfig.email;
+  const apiKey = process.env.RESEND_API_KEY;
+  const client = apiKey && apiKey !== "your-resend-api-key" ? new Resend(apiKey) : null;
+
+  if (!client) {
     // Graceful fallback during dev/demo without API keys
     console.log("[Email Service] Resend key not configured. Mocking email dispatch:", {
       to_customer: data.email,
@@ -34,11 +26,11 @@ export async function sendQuoteConfirmationEmails(
     return { success: true };
   }
 
-  const isDev = process.env.NODE_ENV === "development";
-  const fromAddress = isDev ? "contact@labhouse.net" : `${siteConfig.name} <${siteConfig.email}>`;
+  // Use RESEND_FROM_EMAIL from env if set, otherwise use Resend's default testing domain (onboarding@resend.dev)
+  // until labhouse.net is verified in the Resend dashboard (https://resend.com/domains).
+  const fromAddress = process.env.RESEND_FROM_EMAIL || "Lab House <onboarding@resend.dev>";
 
   console.log("[Email Service] Sending emails:", {
-    isDev,
     fromAddress,
     toCustomer: data.email,
     toAdmin: adminEmail,
@@ -65,7 +57,7 @@ export async function sendQuoteConfirmationEmails(
 
   try {
     // 1. Send confirmation email to customer
-    const customerResult = await resend.emails.send({
+    const customerResult = await client.emails.send({
       from: fromAddress,
       to: [data.email],
       subject: `Quote Request Received — ${siteConfig.name}`,
@@ -103,7 +95,7 @@ export async function sendQuoteConfirmationEmails(
     await logEmail(data.email, `Quote Request Received — ${siteConfig.name}`, "sent");
 
     // 2. Send alert email to Admin
-    const adminResult = await resend.emails.send({
+    const adminResult = await client.emails.send({
       from: fromAddress,
       to: [adminEmail],
       subject: `🚨 [NEW QUOTE] ${data.name} (${data.company || "Individual"}) — ${data.instrument_type.toUpperCase()}`,

@@ -13,7 +13,7 @@ export default function WhyChooseUs() {
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#121c2a]">
             Why Industry Leaders Choose Lab House
           </h2>
-          <p className="font-body text-[#64748B] text-base sm:text-lg">
+          <p className="font-body text-slate-600 text-base sm:text-lg">
             We combine rigorous metrological precision with modern digital workflow
             automation to deliver unmatched speed, accuracy, and compliance.
           </p>
@@ -27,12 +27,12 @@ export default function WhyChooseUs() {
               className="bg-[#f8f9ff] border border-[#D1D5DB]/80 rounded-2xl p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 relative overflow-hidden group"
             >
               {/* Top color bar */}
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#005c55] group-hover:bg-[#F97316] transition-colors" />
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#005c55] group-hover:bg-[#EA580C] transition-colors" />
 
               <div className="space-y-5">
                 <div className="flex items-center justify-between">
                   <CardIcon icon={pillar.icon} />
-                  <span className="text-xs font-bold text-[#F97316] bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+                  <span className="text-xs font-bold text-[#C2410C] bg-orange-50 px-3 py-1 rounded-full border border-orange-300">
                     {pillar.highlight}
                   </span>
                 </div>
@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
                   {pillar.title}
                 </h3>
 
-                <p className="font-body text-sm text-[#64748B] leading-relaxed">
+                <p className="font-body text-sm text-slate-600 leading-relaxed">
                   {pillar.description}
                 </p>
               </div>

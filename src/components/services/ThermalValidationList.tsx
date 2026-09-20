@@ -7,7 +7,7 @@ export default function ThermalValidationList() {
       <div className="max-w-7xl mx-auto space-y-10">
         <div className="border-b border-gray-200 pb-6 flex flex-col sm:flex-row justify-between sm:items-center gap-4">
           <div>
-            <span className="text-[#0F766E] font-semibold text-xs uppercase tracking-wider bg-[#F0FDFA] px-3 py-1 rounded-full border border-[#0F766E]/20">
+            <span className="text-[#004540] font-bold text-xs uppercase tracking-wider bg-[#F0FDFA] px-3 py-1 rounded-full border border-teal-300">
               21 CFR Part 11 &amp; ALCOA Compliant
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[--color-text-primary] mt-2">
@@ -22,7 +22,7 @@ export default function ThermalValidationList() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {thermalValidationScope.map((item, idx) => (
             <div key={item.name} className="bg-white border border-[--color-border] rounded-2xl p-6 shadow-sm flex items-start gap-4 hover:border-[#0F766E]/50 transition-colors">
-              <div className="w-10 h-10 rounded-xl bg-[#0F766E]/10 text-[#0F766E] font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">
+              <div className="w-10 h-10 rounded-xl bg-[#0F766E]/10 text-[#005c55] font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">
                 0{idx + 1}
               </div>
               <div className="space-y-1">
@@ -33,7 +33,7 @@ export default function ThermalValidationList() {
                   {item.spec}
                 </p>
                 <div className="pt-2">
-                  <span className="inline-flex items-center gap-1 text-xs text-[#0F766E] font-medium bg-[#F0FDFA] px-2.5 py-1 rounded border border-[#0F766E]/20">
+                  <span className="inline-flex items-center gap-1 text-xs text-[#004540] font-semibold bg-[#F0FDFA] px-2.5 py-1 rounded border border-teal-300">
                     <span className="material-symbols-outlined text-[14px]">sensors</span>
                     <span>Traceable to National Standards (±0.5°C accuracy)</span>
                   </span>
@@ -46,9 +46,9 @@ export default function ThermalValidationList() {
         <div className="bg-gradient-to-r from-[#0F766E] to-[#0d625b] text-white p-8 rounded-2xl shadow flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="space-y-2">
             <h4 className="font-heading font-bold text-xl">Need Comprehensive Thermal Mapping Protocol Preparation?</h4>
-            <p className="text-white/85 text-sm max-w-2xl">We execute complete IQ, OQ, PQ protocols with spatial 3D mapping reports, risk assessment, and deviation summaries tailored for regulatory inspections.</p>
+            <p className="text-white text-sm max-w-2xl">We execute complete IQ, OQ, PQ protocols with spatial 3D mapping reports, risk assessment, and deviation summaries tailored for regulatory inspections.</p>
           </div>
-          <Link href="/contact" className="bg-white text-[#0F766E] hover:bg-[#99F6E4] font-bold px-6 py-3 rounded-full shadow transition-colors text-sm shrink-0">
+          <Link href="/contact" className="bg-white text-[#004540] hover:bg-teal-50 font-bold px-6 py-3 rounded-full shadow transition-colors text-sm shrink-0">
             Schedule Validation Visit
           </Link>
         </div>

@@ -52,6 +52,7 @@ export default function QuoteForm({ initialInstrument = "" }: QuoteFormProps) {
 
     const result = quoteRequestSchema.safeParse(formData);
     if (!result.success) {
+      console.warn("[QuoteForm Client] Validation failed:", result.error.issues);
       const errors: Record<string, string> = {};
       for (const issue of result.error.issues) {
         if (issue.path[0]) {
@@ -134,9 +135,9 @@ export default function QuoteForm({ initialInstrument = "" }: QuoteFormProps) {
           <h2 className="text-2xl font-bold text-gray-900 tracking-tight">
             Request a Calibration Quote
           </h2>
-          <p className="text-sm text-gray-500 mt-1.5">Please provide your details below and we'll respond promptly.</p>
+          <p className="text-sm text-slate-600 mt-1.5">Please provide your details below and we'll respond promptly.</p>
         </div>
-        <span className="bg-[#0F766E]/5 text-[#0F766E] font-medium text-sm px-4 py-2 rounded-full flex items-center gap-2 self-start sm:self-auto border border-[#0F766E]/10">
+        <span className="bg-teal-50 text-[#004540] font-bold text-sm px-4 py-2 rounded-full flex items-center gap-2 self-start sm:self-auto border border-teal-300">
           <span className="material-symbols-outlined text-[18px]">schedule</span>
           2-Hour Response
         </span>
@@ -190,7 +191,9 @@ export default function QuoteForm({ initialInstrument = "" }: QuoteFormProps) {
             value={honeypot}
             onChange={(e) => setHoneypot(e.target.value)}
             tabIndex={-1}
-            autoComplete="off"
+            autoComplete="new-password"
+            data-lpignore="true"
+            data-form-type="other"
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -305,7 +308,7 @@ export default function QuoteForm({ initialInstrument = "" }: QuoteFormProps) {
           <button
             type="submit"
             disabled={loading || submitted}
-            className="bg-[#F97316] hover:bg-[#EA580C] text-white font-bold text-lg py-4 px-8 rounded-full transition-all duration-200 hover:shadow-lg hover:-translate-y-1 active:translate-y-0 w-full flex items-center justify-center gap-2 disabled:opacity-70 disabled:hover:transform-none cursor-pointer"
+            className="bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-lg py-4 px-8 rounded-full transition-all duration-200 hover:shadow-lg hover:-translate-y-1 active:translate-y-0 w-full flex items-center justify-center gap-2 disabled:opacity-70 disabled:hover:transform-none cursor-pointer"
           >
             {loading ? (
               <>

@@ -8,7 +8,7 @@ export default function CalibrationScopeList() {
       <div className="max-w-7xl mx-auto space-y-10">
         <div className="border-b border-gray-200 pb-6 flex flex-col sm:flex-row justify-between sm:items-center gap-4">
           <div>
-            <span className="text-[#0F766E] font-semibold text-xs uppercase tracking-wider bg-[#F0FDFA] px-3 py-1 rounded-full border border-[#0F766E]/20">
+            <span className="text-[#004540] font-bold text-xs uppercase tracking-wider bg-[#F0FDFA] px-3 py-1 rounded-full border border-teal-300">
               {siteConfig.accreditation} &amp; NABL Traceable
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[--color-text-primary] mt-2">
@@ -25,10 +25,10 @@ export default function CalibrationScopeList() {
             <div key={param.title} className="bg-white border border-[--color-border] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-xl bg-[#F0FDFA] text-[#0F766E] flex items-center justify-center font-bold">
+                  <div className="w-12 h-12 rounded-xl bg-[#F0FDFA] text-[#005c55] flex items-center justify-center font-bold">
                     <span className="material-symbols-outlined text-2xl">{param.icon}</span>
                   </div>
-                  <span className="text-xs font-mono font-semibold bg-gray-100 text-gray-700 px-2.5 py-1 rounded">
+                  <span className="text-xs font-mono font-bold bg-gray-100 text-gray-800 px-2.5 py-1 rounded border border-gray-200">
                     {param.range}
                   </span>
                 </div>
@@ -37,7 +37,7 @@ export default function CalibrationScopeList() {
                   {param.title}
                 </h3>
 
-                <div className="text-xs font-semibold text-[#0F766E] flex items-center gap-1.5">
+                <div className="text-xs font-bold text-[#004540] flex items-center gap-1.5">
                   <span className="material-symbols-outlined text-base">verified</span>
                   <span>{param.accuracy}</span>
                 </div>
@@ -48,8 +48,8 @@ export default function CalibrationScopeList() {
               </div>
 
               <div className="pt-5 mt-5 border-t border-gray-100 flex items-center justify-between">
-                <span className="text-xs text-gray-500 font-medium">Standard &amp; Emergency Turnaround</span>
-                <Link href="/contact" className="text-xs font-bold text-[#0F766E] hover:underline flex items-center gap-1">
+                <span className="text-xs text-slate-600 font-medium">Standard &amp; Emergency Turnaround</span>
+                <Link href="/contact" className="text-xs font-bold text-[#005c55] hover:underline flex items-center gap-1">
                   <span>Get Quote</span>
                   <span className="material-symbols-outlined text-sm">arrow_forward</span>
                 </Link>

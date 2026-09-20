@@ -13,7 +13,7 @@ export const calibrationParameters: CalibrationParameter[] = [
     icon: "thermostat",
     range: "-199.99°C to +1300°C",
     accuracy: "±0.01°C to ±0.5°C Traceability",
-    desc: "NABL & ISO/IEC 17025 accredited calibration for RTD Pt-100 sensors, S-Type thermocouples, digital thermometers, dry block calibrators, and deep freezers (-80°C to 50°C).",
+    desc: "NABL & ISO accredited calibration for RTD Pt-100 sensors, S-Type thermocouples, digital thermometers, dry block calibrators, and deep freezers (-80°C to 50°C).",
   },
   {
     title: "Dimensional & Mechanical Calibration",

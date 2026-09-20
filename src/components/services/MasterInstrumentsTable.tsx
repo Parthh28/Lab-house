@@ -6,7 +6,7 @@ export default function MasterInstrumentsTable() {
       <div className="max-w-7xl mx-auto space-y-8">
         <div className="border-b border-gray-200 pb-6 flex flex-col sm:flex-row justify-between sm:items-center gap-4">
           <div>
-            <span className="text-[#0F766E] font-semibold text-xs uppercase tracking-wider bg-[#F0FDFA] px-3 py-1 rounded-full border border-[#0F766E]/20">
+            <span className="text-[#004540] font-bold text-xs uppercase tracking-wider bg-[#F0FDFA] px-3 py-1 rounded-full border border-teal-300">
               Unbroken Measurement Traceability
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[--color-text-primary] mt-2">
@@ -22,7 +22,7 @@ export default function MasterInstrumentsTable() {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-[#0F766E] text-white text-xs uppercase tracking-wider font-semibold">
+                <tr className="bg-[#005c55] text-white text-xs uppercase tracking-wider font-semibold">
                   <th className="py-4 px-6 border-b border-white/10 w-16 text-center">S.No.</th>
                   <th className="py-4 px-6 border-b border-white/10">Master Instrument / Calibration Standard</th>
                   <th className="py-4 px-6 border-b border-white/10">Range / Specification &amp; Accuracy</th>
@@ -32,7 +32,7 @@ export default function MasterInstrumentsTable() {
               <tbody className="divide-y divide-gray-200 text-sm">
                 {masterInstrumentsTable.map((inst) => (
                   <tr key={inst.sNo} className="hover:bg-[#F0FDFA]/60 transition-colors">
-                    <td className="py-3.5 px-6 text-center font-mono font-semibold text-[#0F766E]">
+                    <td className="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">
                       {inst.sNo}
                     </td>
                     <td className="py-3.5 px-6 font-semibold text-[--color-text-primary]">
@@ -42,7 +42,7 @@ export default function MasterInstrumentsTable() {
                       {inst.range}
                     </td>
                     <td className="py-3.5 px-6 font-medium text-gray-800">
-                      <span className="bg-[#F0FDFA] text-[#0F766E] px-2.5 py-1 rounded text-xs border border-[#0F766E]/20 font-semibold">
+                      <span className="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">
                         {inst.agency}
                       </span>
                     </td>

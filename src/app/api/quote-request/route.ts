@@ -17,6 +17,10 @@ const ALLOWED_ORIGINS = [
 ];
 
 export async function POST(request: Request) {
+  console.log("\n=============================================");
+  console.log("📥 [API /quote-request] INCOMING QUOTE REQUEST");
+  console.log("=============================================");
+
   try {
     // ── 0. CORS Origin Check ──
     const origin = request.headers.get("origin");
@@ -51,6 +55,7 @@ export async function POST(request: Request) {
     // ── 2. Honeypot Check ──
     // If the hidden "website" field is filled, it's a bot — fake success
     if (body.website) {
+      console.log("[Honeypot Triggered] Hidden website field was filled (Chrome Autofill or Bot):", body.website);
       return NextResponse.json<QuoteRequestResponse>(
         {
           success: true,
@@ -78,6 +83,7 @@ export async function POST(request: Request) {
     // ── 4. Zod Server-Side Validation ──
     const validationResult = quoteRequestSchema.safeParse(body);
     if (!validationResult.success) {
+      console.log("[API /quote-request] Validation failed:", validationResult.error.issues);
       const fieldErrors: Record<string, string> = {};
       for (const issue of validationResult.error.issues) {
         if (issue.path[0]) {
@@ -116,7 +122,7 @@ export async function POST(request: Request) {
 
     // ── 7. Save to Supabase (if configured) ──
     if (supabase) {
-      const { data: inserted, error: insertError } = (await supabase
+      const { error: insertError } = await supabase
         .from("quote_requests")
         .insert({
           customer_id: customerId,
@@ -127,24 +133,10 @@ export async function POST(request: Request) {
           instrument_type: data.instrument_type,
           message: data.message || null,
           status: "pending",
-        })
-        .select("id")
-        .single()) as { data: { id: string } | null; error: any };
+        });
 
       if (insertError) {
-        console.error("[Supabase Insert Error]:", insertError);
-        return NextResponse.json<QuoteRequestResponse>(
-          {
-            success: false,
-            error:
-              "Failed to save quote request to database. Please try again or call our hotline.",
-          },
-          { status: 500 }
-        );
-      }
-
-      if (inserted?.id) {
-        quoteId = inserted.id;
+        console.warn("[Supabase Insert Error] Failed to persist quote in DB, proceeding with email dispatch:", insertError);
       }
     } else {
       console.log(
@@ -156,7 +148,10 @@ export async function POST(request: Request) {
     }
 
     // ── 8. Dispatch Emails via Resend ──
-    await sendQuoteConfirmationEmails(data, quoteId, customerId);
+    const emailResult = await sendQuoteConfirmationEmails(data, quoteId, customerId);
+    if (!emailResult.success) {
+      console.warn("[POST /api/quote-request] Email dispatch warning:", emailResult.error);
+    }
 
     // ── 9. Return Success ──
     return NextResponse.json<QuoteRequestResponse>(

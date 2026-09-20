@@ -12,9 +12,9 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
   {
     icon: "verified_user",
     title: "ALCOA Quality Management Systems",
-    highlight: "ISO/IEC 17025:2017 & NABL",
+    highlight: "ISO 2017 & NABL",
     description:
-      "Rigorous use of Standard Operating Procedures (SOPs) and ALCOA principles. All technical personnel undergo half-yearly training on laboratory SWPs and ISO/IEC requirements.",
+      "Rigorous use of Standard Operating Procedures (SOPs) and ALCOA principles. All technical personnel undergo half-yearly training on laboratory SWPs and ISO requirements.",
     stats: "Periodic Reviews & Strict Compliance",
   },
   {

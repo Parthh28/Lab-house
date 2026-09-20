@@ -66,7 +66,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-lg md:px-xxl">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-lg">
             <div className="bg-white p-lg rounded-xl border border-border-gray shadow-[0_1px_3px_rgba(0,0,0,0.08)] flex items-center gap-md">
-              <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container shrink-0">
+              <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-[#005c55] shrink-0">
                 <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>
                   history
                 </span>
@@ -75,30 +75,30 @@ export default function HomePage() {
                 <div className="font-headline-sm text-headline-sm text-on-surface font-bold">
                   Since {siteConfig.establishedYear}
                 </div>
-                <div className="font-body-sm text-text-secondary text-xs">
+                <div className="font-body-sm text-slate-600 text-xs font-medium">
                   25+ Years of Metrology Excellence
                 </div>
               </div>
             </div>
 
             <div className="bg-white p-lg rounded-xl border border-border-gray shadow-[0_1px_3px_rgba(0,0,0,0.08)] flex items-center gap-md">
-              <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container shrink-0">
+              <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-[#005c55] shrink-0">
                 <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>
                   verified
                 </span>
               </div>
               <div>
                 <div className="font-headline-sm text-headline-sm text-on-surface font-bold">
-                  ISO/IEC 17025
+                  ISO 2017
                 </div>
-                <div className="font-body-sm text-text-secondary text-xs">
+                <div className="font-body-sm text-slate-600 text-xs font-medium">
                   NABL Accredited Laboratory
                 </div>
               </div>
             </div>
 
             <div className="bg-white p-lg rounded-xl border border-border-gray shadow-[0_1px_3px_rgba(0,0,0,0.08)] flex items-center gap-md">
-              <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container shrink-0">
+              <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-[#005c55] shrink-0">
                 <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>
                   precision_manufacturing
                 </span>
@@ -107,14 +107,14 @@ export default function HomePage() {
                 <div className="font-headline-sm text-headline-sm text-on-surface font-bold">
                   37+ Master
                 </div>
-                <div className="font-body-sm text-text-secondary text-xs">
+                <div className="font-body-sm text-slate-600 text-xs font-medium">
                   Calibrated Standards &amp; Instruments
                 </div>
               </div>
             </div>
 
             <div className="bg-white p-lg rounded-xl border border-border-gray shadow-[0_1px_3px_rgba(0,0,0,0.08)] flex items-center gap-md">
-              <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container shrink-0">
+              <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-[#005c55] shrink-0">
                 <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>
                   timer
                 </span>
@@ -123,7 +123,7 @@ export default function HomePage() {
                 <div className="font-headline-sm text-headline-sm text-on-surface font-bold">
                   2-Hour
                 </div>
-                <div className="font-body-sm text-text-secondary text-xs">
+                <div className="font-body-sm text-slate-600 text-xs font-medium">
                   Complaint &amp; Quote Guarantee
                 </div>
               </div>

@@ -303,7 +303,7 @@ export default function PrivacyPolicyPage() {
                 </span>
                 <span>
                   Calibration service records may be retained longer as required
-                  by ISO/IEC 17025 quality management standards
+                  by ISO quality management standards
                 </span>
               </li>
             </ul>

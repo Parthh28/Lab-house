@@ -21,7 +21,7 @@ export default function TestimonialSection() {
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#121c2a]">
             Trusted by Leading Industries Across India
           </h2>
-          <p className="font-body text-[#64748B] text-base sm:text-lg">
+          <p className="font-body text-slate-700 text-base sm:text-lg">
             For over 25 years, Lab House has served top-tier enterprises across Pharmaceutical,
             Engineering, Chemical, and Public Sector industries with complete NABL and {siteConfig.accreditation} traceability.
           </p>
@@ -36,14 +36,14 @@ export default function TestimonialSection() {
               className={`flex items-center gap-2 px-5 py-3 rounded-full font-heading font-medium text-sm transition-all duration-200 cursor-pointer ${
                 activeTab === cat.id
                   ? "bg-[#005c55] text-white shadow-md scale-105"
-                  : "bg-white text-[#64748B] hover:bg-gray-100 border border-[#D1D5DB]"
+                  : "bg-white text-slate-700 hover:bg-gray-100 border border-[#D1D5DB]"
               }`}
             >
               <span className="material-symbols-outlined text-lg">{cat.icon}</span>
               <span>{cat.name}</span>
               <span
                 className={`text-xs px-2 py-0.5 rounded-full font-bold ${
-                  activeTab === cat.id ? "bg-white/20 text-white" : "bg-gray-200 text-gray-700"
+                  activeTab === cat.id ? "bg-white/20 text-white" : "bg-gray-200 text-gray-800"
                 }`}
               >
                 {cat.count}
@@ -61,7 +61,7 @@ export default function TestimonialSection() {
               </span>
               <span>{currentCategory.name}</span>
             </h3>
-            <span className="text-xs text-[#64748B] bg-gray-100 px-3 py-1 rounded-full font-medium">
+            <span className="text-xs text-slate-700 bg-gray-100 px-3 py-1 rounded-full font-medium border border-gray-200">
               Full NABL Traceability &amp; ALCOA QMS Compliance
             </span>
           </div>
@@ -86,21 +86,21 @@ export default function TestimonialSection() {
         {/* Code of Ethics Commitment Banner */}
         <div className="bg-gradient-to-r from-[#0F766E] to-[#0d625b] text-white p-8 rounded-2xl shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 max-w-3xl">
-            <div className="flex items-center gap-2 text-[#99F6E4] text-xs font-bold uppercase tracking-wider">
+            <div className="flex items-center gap-2 text-teal-200 text-xs font-bold uppercase tracking-wider">
               <span className="material-symbols-outlined text-base">gavel</span>
               <span>Lab House Code of Ethics Commitment</span>
             </div>
             <h4 className="font-heading font-bold text-xl sm:text-2xl">
               Impartiality, Confidentiality &amp; Absolute Integrity
             </h4>
-            <p className="text-white/85 text-sm leading-relaxed">
+            <p className="text-white text-sm leading-relaxed">
               We strictly adhere to 12 ethical pillars: ensuring reliability of results, preserving complete confidentiality of client calibration data, avoiding all conflicts of interest, and upholding ALCOA measurement integrity.
             </p>
           </div>
           <div className="shrink-0">
             <Link
               href="/about"
-              className="bg-white text-[#0F766E] hover:bg-[#99F6E4] font-semibold px-6 py-3 rounded-full shadow transition-colors text-sm inline-flex items-center gap-2"
+              className="bg-white text-[#004540] hover:bg-teal-50 font-bold px-6 py-3 rounded-full shadow transition-colors text-sm inline-flex items-center gap-2"
             >
               <span>Read Full Code of Ethics</span>
               <span className="material-symbols-outlined text-base">arrow_forward</span>

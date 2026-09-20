@@ -26,7 +26,7 @@ export default function Button({
 
   const variants = {
     primary:
-      "bg-[#F97316] hover:bg-[#EA580C] text-white shadow-sm focus:ring-[#F97316]",
+      "bg-[#EA580C] hover:bg-[#C2410C] text-white shadow-sm focus:ring-[#EA580C] font-semibold",
     secondary:
       "bg-[#005c55] hover:bg-[#004540] text-white shadow-sm focus:ring-[#005c55]",
     outline:

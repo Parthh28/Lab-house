@@ -2,6 +2,7 @@ import Link from "next/link";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import { siteConfig } from "@/config/site.config";
+import HeroImageCard from "./HeroImageCard";
 
 export default function HeroSection() {
   return (
@@ -55,21 +56,21 @@ export default function HeroSection() {
           </div>
 
           {/* Quick Trust Highlights */}
-          <div className="pt-6 border-t border-white/15 grid grid-cols-3 gap-4 max-w-lg text-xs sm:text-sm text-white/80">
+          <div className="pt-6 border-t border-white/15 grid grid-cols-3 gap-4 max-w-lg text-xs sm:text-sm text-white font-medium">
             <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-[#99F6E4]">
+              <span className="material-symbols-outlined text-teal-200">
                 check_circle
               </span>
-              <span>NABL &amp; ISO 17025:2017</span>
+              <span>NABL &amp; ISO 2017</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-[#99F6E4]">
+              <span className="material-symbols-outlined text-teal-200">
                 verified_user
               </span>
               <span>ALCOA QMS Compliant</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-[#99F6E4]">
+              <span className="material-symbols-outlined text-teal-200">
                 apartment
               </span>
               <span>{siteConfig.address.street}, {siteConfig.address.district} &amp; PAN India</span>
@@ -77,79 +78,9 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Right Column: Visual Trust Card (5 cols) */}
+        {/* Right Column: Laboratory Image Card (5 cols) */}
         <div className="lg:col-span-5 flex justify-center lg:justify-end animate-fade-in">
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl w-full max-w-md shadow-2xl space-y-6">
-            <div className="flex items-center justify-between border-b border-white/15 pb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-[#99F6E4] rounded-lg flex items-center justify-center text-[#005c55] font-bold">
-                  <span className="material-symbols-outlined">analytics</span>
-                </div>
-                <div>
-                  <h3 className="font-heading font-semibold text-white text-base">
-                    Accredited Disciplines
-                  </h3>
-                  <p className="text-xs text-[#99F6E4]">
-                    National/International Traceability
-                  </p>
-                </div>
-              </div>
-              <span className="bg-green-500/20 text-green-300 text-xs px-2.5 py-1 rounded-full border border-green-500/30 font-medium">
-                Active Lab
-              </span>
-            </div>
-
-            <div className="space-y-4 text-sm text-white/90">
-              <div className="flex justify-between items-center bg-white/5 p-3.5 rounded-lg border border-white/10">
-                <span className="flex items-center gap-2.5">
-                  <span className="material-symbols-outlined text-[#99F6E4] text-base">
-                    straighten
-                  </span>
-                  Mechanical Discipline
-                </span>
-                <span className="text-[#99F6E4] font-semibold text-xs">
-                  Pressure, Dimensions, Weights
-                </span>
-              </div>
-              <div className="flex justify-between items-center bg-white/5 p-3.5 rounded-lg border border-white/10">
-                <span className="flex items-center gap-2.5">
-                  <span className="material-symbols-outlined text-[#99F6E4] text-base">
-                    thermostat
-                  </span>
-                  Thermal Discipline
-                </span>
-                <span className="text-[#99F6E4] font-semibold text-xs">
-                  -199.99°C to +1300°C
-                </span>
-              </div>
-              <div className="flex justify-between items-center bg-white/5 p-3.5 rounded-lg border border-white/10">
-                <span className="flex items-center gap-2.5">
-                  <span className="material-symbols-outlined text-[#99F6E4] text-base">
-                    bolt
-                  </span>
-                  Electro-Technical
-                </span>
-                <span className="text-[#99F6E4] font-semibold text-xs">
-                  Voltage, Resistance, RPM
-                </span>
-              </div>
-            </div>
-
-            <div className="bg-[#004540]/80 p-4 rounded-xl border border-white/10 flex items-center justify-between">
-              <div>
-                <p className="text-xs text-white/70">Need Rush Turnaround?</p>
-                <p className="text-sm font-semibold text-white">
-                  Get certified in as little as 24h
-                </p>
-              </div>
-              <Link
-                href="/contact"
-                className="text-xs bg-[#99F6E4] text-[#005c55] font-bold px-3 py-1.5 rounded-full hover:bg-white transition-colors"
-              >
-                Inquire
-              </Link>
-            </div>
-          </div>
+          <HeroImageCard />
         </div>
       </div>
     </section>

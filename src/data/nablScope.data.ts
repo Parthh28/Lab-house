@@ -24,7 +24,7 @@ export interface NablServiceScopeCategory {
 export const nablMeta = {
   labName: "LAB HOUSE",
   address: "TIRUPATI TRADE CENTRE, GALA NO. 205, 2ND FLOOR, NAVGHAR, VASAI (EAST), VASAI, PALGHAR, MAHARASHTRA, INDIA",
-  standard: "ISO/IEC 17025:2017",
+  standard: "ISO 2017",
   certificateNumber: "CC-4341",
   validity: "26/03/2025 to 25/03/2029",
   totalPages: 18,

@@ -79,8 +79,8 @@ export default function NablScopeSection() {
               onClick={() => setViewMode("services")}
               className={`flex-1 sm:flex-none flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-heading text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                 viewMode === "services"
-                  ? "bg-[#0F766E] text-white shadow-sm"
-                  : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
+                  ? "bg-[#005c55] text-white shadow-sm"
+                  : "text-slate-700 hover:text-slate-900 hover:bg-slate-100"
               }`}
             >
               <span className="material-symbols-outlined text-base">grid_view</span>
@@ -91,8 +91,8 @@ export default function NablScopeSection() {
               onClick={() => setViewMode("official-table")}
               className={`flex-1 sm:flex-none flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-heading text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                 viewMode === "official-table"
-                  ? "bg-[#0F766E] text-white shadow-sm"
-                  : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
+                  ? "bg-[#005c55] text-white shadow-sm"
+                  : "text-slate-700 hover:text-slate-900 hover:bg-slate-100"
               }`}
             >
               <span className="material-symbols-outlined text-base">table_chart</span>
@@ -100,8 +100,8 @@ export default function NablScopeSection() {
             </button>
           </div>
 
-          <div className="text-xs text-slate-500 font-medium">
-            Showing <strong className="text-slate-800">{viewMode === "services" ? nablServicesScope.length : visibleTableItems.length}</strong> of <strong className="text-slate-800">{viewMode === "services" ? nablServicesScope.length : filteredTableItems.length}</strong> scope parameters
+          <div className="text-xs text-slate-600 font-medium">
+            Showing <strong className="text-slate-900">{viewMode === "services" ? nablServicesScope.length : visibleTableItems.length}</strong> of <strong className="text-slate-900">{viewMode === "services" ? nablServicesScope.length : filteredTableItems.length}</strong> scope parameters
           </div>
         </div>
 
@@ -112,33 +112,33 @@ export default function NablScopeSection() {
               {nablServicesScope.map((item) => (
                 <div
                   key={item.id}
-                  className="bg-white rounded-3xl border border-slate-200/90 p-6 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between space-y-5 group hover:border-[#0F766E]/50"
+                  className="bg-white rounded-3xl border border-slate-200/90 p-6 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between space-y-5 group hover:border-[#005c55]/50"
                 >
                   <div className="space-y-4">
                     {/* Header: Icon & Facility Badge */}
                     <div className="flex items-center justify-between">
-                      <div className="w-11 h-11 rounded-2xl bg-teal-50 text-[#0F766E] border border-teal-100 flex items-center justify-center group-hover:bg-[#0F766E] group-hover:text-white transition-colors duration-300 shadow-2xs">
+                      <div className="w-11 h-11 rounded-2xl bg-teal-50 text-[#005c55] border border-teal-200 flex items-center justify-center group-hover:bg-[#005c55] group-hover:text-white transition-colors duration-300 shadow-2xs">
                         <span className="material-symbols-outlined text-2xl">{item.icon}</span>
                       </div>
-                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider bg-slate-100/90 text-slate-700 px-2.5 py-1 rounded-full border border-slate-200">
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider bg-slate-100 text-slate-800 px-2.5 py-1 rounded-full border border-slate-200">
                         {item.facility}
                       </span>
                     </div>
 
                     {/* Title & Description */}
                     <div className="space-y-1.5">
-                      <h3 className="font-heading font-bold text-lg text-slate-900 leading-snug group-hover:text-[#0F766E] transition-colors">
+                      <h3 className="font-heading font-bold text-lg text-slate-900 leading-snug group-hover:text-[#005c55] transition-colors">
                         {item.title}
                       </h3>
-                      <p className="text-xs text-slate-600 leading-relaxed font-body">
+                      <p className="text-xs text-slate-700 leading-relaxed font-body">
                         {item.description}
                       </p>
                     </div>
 
                     {/* Structured Range Chips */}
                     <div className="space-y-1.5 pt-2 border-t border-slate-100">
-                      <div className="flex items-center gap-1.5 text-[10px] font-extrabold text-slate-400 uppercase tracking-wider">
-                        <span className="material-symbols-outlined text-xs text-[#0F766E]">straighten</span>
+                      <div className="flex items-center gap-1.5 text-[10px] font-extrabold text-slate-600 uppercase tracking-wider">
+                        <span className="material-symbols-outlined text-xs text-[#005c55]">straighten</span>
                         <span>Accredited Measurement Range</span>
                       </div>
                       <div className="flex flex-wrap gap-1.5">
@@ -146,13 +146,13 @@ export default function NablScopeSection() {
                           item.rangesList.map((r, i) => (
                             <span
                               key={i}
-                              className="inline-flex items-center font-mono text-[11px] font-bold bg-emerald-50 text-emerald-900 border border-emerald-200/80 px-2.5 py-1 rounded-lg shadow-2xs"
+                              className="inline-flex items-center font-mono text-[11px] font-bold bg-emerald-50 text-emerald-950 border border-emerald-300 px-2.5 py-1 rounded-lg shadow-2xs"
                             >
                               {r}
                             </span>
                           ))
                         ) : (
-                          <span className="inline-flex items-center font-mono text-[11px] font-bold bg-emerald-50 text-emerald-900 border border-emerald-200/80 px-2.5 py-1 rounded-lg shadow-2xs">
+                          <span className="inline-flex items-center font-mono text-[11px] font-bold bg-emerald-50 text-emerald-950 border border-emerald-300 px-2.5 py-1 rounded-lg shadow-2xs">
                             {item.range}
                           </span>
                         )}
@@ -164,7 +164,7 @@ export default function NablScopeSection() {
                   <div className="pt-3 border-t border-slate-100 flex items-center justify-between gap-2 text-xs">
                     <button
                       onClick={() => handleDisciplineSelectFromCard(item.discipline)}
-                      className="text-[#0F766E] bg-teal-50 hover:bg-teal-100 font-bold px-3.5 py-2 rounded-xl transition-colors flex items-center gap-1.5 text-[11px] border border-teal-200/60 cursor-pointer"
+                      className="text-[#004540] bg-teal-50 hover:bg-teal-100 font-bold px-3.5 py-2 rounded-xl transition-colors flex items-center gap-1.5 text-[11px] border border-teal-300 cursor-pointer"
                     >
                       <span className="material-symbols-outlined text-xs">table_view</span>
                       <span>View Parameters</span>
@@ -172,7 +172,7 @@ export default function NablScopeSection() {
 
                     <Link
                       href="/contact"
-                      className="font-bold text-slate-700 hover:text-[#0F766E] flex items-center gap-1 shrink-0 transition-colors"
+                      className="font-bold text-slate-800 hover:text-[#005c55] flex items-center gap-1 shrink-0 transition-colors"
                     >
                       <span>Inquire</span>
                       <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -290,7 +290,7 @@ export default function NablScopeSection() {
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
-                    <tr className="bg-slate-100 text-slate-700 border-b border-slate-200 font-heading">
+                    <tr className="bg-slate-100 text-slate-800 border-b border-slate-200 font-heading">
                       <th className="py-3.5 px-4 font-bold w-12 text-center">S.No</th>
                       <th className="py-3.5 px-4 font-bold w-28">Facility</th>
                       <th className="py-3.5 px-4 font-bold w-44">Discipline</th>
@@ -304,32 +304,32 @@ export default function NablScopeSection() {
                     {visibleTableItems.length > 0 ? (
                       visibleTableItems.map((row, idx) => (
                         <tr key={`${row.facility}-${row.sNo}-${idx}`} className="hover:bg-teal-50/50 transition-colors">
-                          <td className="py-3 px-4 text-center font-mono text-slate-500">{row.sNo}</td>
+                          <td className="py-3 px-4 text-center font-mono font-semibold text-slate-600">{row.sNo}</td>
                           <td className="py-3 px-4">
                             <span
-                              className={`inline-block px-2 py-0.5 rounded text-[10px] font-semibold ${
+                              className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold ${
                                 row.facility === "Permanent"
-                                  ? "bg-teal-100 text-teal-800"
-                                  : "bg-amber-100 text-amber-800"
+                                  ? "bg-teal-100 text-teal-900 border border-teal-300"
+                                  : "bg-amber-100 text-amber-950 border border-amber-300"
                               }`}
                             >
                               {row.facility}
                             </span>
                           </td>
-                          <td className="py-3 px-4 font-medium text-slate-700">{row.discipline}</td>
-                          <td className="py-3 px-4 font-semibold text-slate-900">{row.measurand}</td>
-                          <td className="py-3 px-4 text-slate-600">{row.method}</td>
-                          <td className="py-3 px-4 font-mono font-medium text-slate-800">{row.range}</td>
-                          <td className="py-3 px-4 text-right font-mono font-bold text-[#0F766E]">{row.cmc}</td>
+                          <td className="py-3 px-4 font-semibold text-slate-800">{row.discipline}</td>
+                          <td className="py-3 px-4 font-bold text-slate-900">{row.measurand}</td>
+                          <td className="py-3 px-4 text-slate-700">{row.method}</td>
+                          <td className="py-3 px-4 font-mono font-medium text-slate-900">{row.range}</td>
+                          <td className="py-3 px-4 text-right font-mono font-bold text-[#004540]">{row.cmc}</td>
                         </tr>
                       ))
                     ) : (
                       <tr>
                         <td colSpan={7} className="py-12 text-center text-slate-400">
                           <div className="flex flex-col items-center gap-2">
-                            <span className="material-symbols-outlined text-4xl text-slate-300">search_off</span>
-                            <p className="font-semibold text-slate-600">No matching scope parameters found</p>
-                            <p className="text-xs text-slate-400">Try adjusting your search term or filters.</p>
+                            <span className="material-symbols-outlined text-4xl text-slate-400">search_off</span>
+                            <p className="font-semibold text-slate-700">No matching scope parameters found</p>
+                            <p className="text-xs text-slate-500">Try adjusting your search term or filters.</p>
                           </div>
                         </td>
                       </tr>
@@ -344,7 +344,7 @@ export default function NablScopeSection() {
                   {visibleCount < filteredTableItems.length && (
                     <button
                       onClick={() => setVisibleCount((prev) => prev + STEP_COUNT)}
-                      className="bg-[#0F766E] hover:bg-[#0D6E66] text-white font-bold text-xs px-6 py-2.5 rounded-xl transition-all shadow-sm flex items-center gap-2 cursor-pointer"
+                      className="bg-[#005c55] hover:bg-[#004540] text-white font-bold text-xs px-6 py-2.5 rounded-xl transition-all shadow-sm flex items-center gap-2 cursor-pointer"
                     >
                       <span className="material-symbols-outlined text-lg">expand_more</span>
                       <span>Show More ({filteredTableItems.length - visibleCount} Remaining)</span>
@@ -354,7 +354,7 @@ export default function NablScopeSection() {
                   {visibleCount < filteredTableItems.length && (
                     <button
                       onClick={() => setVisibleCount(filteredTableItems.length)}
-                      className="bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 font-semibold text-xs px-5 py-2.5 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer"
+                      className="bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 font-semibold text-xs px-5 py-2.5 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer"
                     >
                       <span className="material-symbols-outlined text-base">unfold_more</span>
                       <span>Show All ({filteredTableItems.length})</span>
@@ -374,11 +374,11 @@ export default function NablScopeSection() {
               )}
 
               {/* Table Footer Summary */}
-              <div className="bg-slate-100 p-4 border-t border-slate-200 flex flex-wrap justify-between items-center text-xs text-slate-500">
+              <div className="bg-slate-100 p-4 border-t border-slate-200 flex flex-wrap justify-between items-center text-xs text-slate-600 font-medium">
                 <div>
-                  Displaying <strong>{visibleTableItems.length}</strong> of <strong>{filteredTableItems.length}</strong> filtered items ({allTableItems.length} total NABL scope parameters).
+                  Displaying <strong className="text-slate-900">{visibleTableItems.length}</strong> of <strong className="text-slate-900">{filteredTableItems.length}</strong> filtered items ({allTableItems.length} total NABL scope parameters).
                 </div>
-                <div className="italic">
+                <div className="italic text-slate-600">
                   * All CMCs represent expanded uncertainties at ~95% confidence level (k = 2).
                 </div>
               </div>

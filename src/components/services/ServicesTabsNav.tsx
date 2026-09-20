@@ -11,8 +11,8 @@ export default function ServicesTabsNav({ activeTab, setActiveTab }: ServicesTab
           onClick={() => setActiveTab("nabl")}
           className={`flex items-center gap-2 px-4 py-2 rounded-full font-heading font-semibold text-xs sm:text-sm transition-all cursor-pointer ${
             activeTab === "nabl"
-              ? "bg-[#0F766E] text-white shadow"
-              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              ? "bg-[#005c55] text-white shadow"
+              : "bg-gray-100 text-gray-800 hover:bg-gray-200 border border-gray-200"
           }`}
         >
           <span className="material-symbols-outlined text-base">verified</span>
@@ -23,8 +23,8 @@ export default function ServicesTabsNav({ activeTab, setActiveTab }: ServicesTab
           onClick={() => setActiveTab("calibration")}
           className={`flex items-center gap-2 px-4 py-2 rounded-full font-heading font-semibold text-xs sm:text-sm transition-all cursor-pointer ${
             activeTab === "calibration"
-              ? "bg-[#0F766E] text-white shadow"
-              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              ? "bg-[#005c55] text-white shadow"
+              : "bg-gray-100 text-gray-800 hover:bg-gray-200 border border-gray-200"
           }`}
         >
           <span className="material-symbols-outlined text-base">straighten</span>
@@ -35,8 +35,8 @@ export default function ServicesTabsNav({ activeTab, setActiveTab }: ServicesTab
           onClick={() => setActiveTab("thermal")}
           className={`flex items-center gap-2 px-4 py-2 rounded-full font-heading font-semibold text-xs sm:text-sm transition-all cursor-pointer ${
             activeTab === "thermal"
-              ? "bg-[#0F766E] text-white shadow"
-              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              ? "bg-[#005c55] text-white shadow"
+              : "bg-gray-100 text-gray-800 hover:bg-gray-200 border border-gray-200"
           }`}
         >
           <span className="material-symbols-outlined text-base">thermostat</span>
@@ -47,8 +47,8 @@ export default function ServicesTabsNav({ activeTab, setActiveTab }: ServicesTab
           onClick={() => setActiveTab("hvac")}
           className={`flex items-center gap-2 px-4 py-2 rounded-full font-heading font-semibold text-xs sm:text-sm transition-all cursor-pointer ${
             activeTab === "hvac"
-              ? "bg-[#0F766E] text-white shadow"
-              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              ? "bg-[#005c55] text-white shadow"
+              : "bg-gray-100 text-gray-800 hover:bg-gray-200 border border-gray-200"
           }`}
         >
           <span className="material-symbols-outlined text-base">air</span>
@@ -59,8 +59,8 @@ export default function ServicesTabsNav({ activeTab, setActiveTab }: ServicesTab
           onClick={() => setActiveTab("instruments")}
           className={`flex items-center gap-2 px-4 py-2 rounded-full font-heading font-semibold text-xs sm:text-sm transition-all cursor-pointer ${
             activeTab === "instruments"
-              ? "bg-[#0F766E] text-white shadow"
-              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              ? "bg-[#005c55] text-white shadow"
+              : "bg-gray-100 text-gray-800 hover:bg-gray-200 border border-gray-200"
           }`}
         >
           <span className="material-symbols-outlined text-base">precision_manufacturing</span>

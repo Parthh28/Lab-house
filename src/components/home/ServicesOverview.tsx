@@ -9,7 +9,7 @@ const coreServices = [
     id: "calibration",
     title: "Calibration Services",
     icon: "straighten",
-    badge: "ISO/IEC 17025:2017",
+    badge: "ISO 2017",
     description:
       "Precision NABL accredited calibration for 10 core industrial measurement parameters using 37 specialized master instruments with full unbroken chain of national/international traceability.",
     turnaround: "Standard & Express Available",
@@ -74,7 +74,7 @@ export default function ServicesOverview() {
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#121c2a]">
             Our Core Calibration &amp; Validation Capabilities
           </h2>
-          <p className="font-body text-[#64748B] text-base sm:text-lg">
+          <p className="font-body text-slate-700 text-base sm:text-lg">
             Operating under {siteConfig.accreditation}, Lab House delivers comprehensive
             measurement, thermal validation, and HVAC cleanroom testing with full ALCOA quality adherence.
           </p>
@@ -87,7 +87,7 @@ export default function ServicesOverview() {
               <div className="space-y-5">
                 <div className="flex items-center justify-between">
                   <CardIcon icon={cat.icon} />
-                  <span className="bg-[#005c55]/10 text-[#005c55] text-xs font-bold px-3 py-1 rounded-full border border-[#005c55]/20">
+                  <span className="bg-[#005c55]/10 text-[#004540] text-xs font-bold px-3 py-1 rounded-full border border-[#005c55]/20">
                     {cat.badge}
                   </span>
                 </div>
@@ -96,20 +96,20 @@ export default function ServicesOverview() {
                   {cat.title}
                 </h3>
 
-                <p className="font-body text-sm text-[#64748B] leading-relaxed">
+                <p className="font-body text-sm text-slate-700 leading-relaxed">
                   {cat.description}
                 </p>
 
                 {/* Turnaround & Traceability Badges */}
                 <div className="pt-1 pb-1 flex flex-wrap gap-2 text-xs">
-                  <span className="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-md flex items-center gap-1.5 font-medium border border-gray-200">
+                  <span className="bg-gray-100 text-gray-800 px-3 py-1.5 rounded-md flex items-center gap-1.5 font-medium border border-gray-200">
                     <span className="material-symbols-outlined text-[14px] text-[#005c55]">
                       schedule
                     </span>
                     <span>{cat.turnaround}</span>
                   </span>
-                  <span className="bg-[#F0FDFA] text-[#0F766E] px-3 py-1.5 rounded-md flex items-center gap-1.5 font-medium border border-[#0F766E]/20">
-                    <span className="material-symbols-outlined text-[14px] text-[#0F766E]">
+                  <span className="bg-[#F0FDFA] text-[#004540] px-3 py-1.5 rounded-md flex items-center gap-1.5 font-semibold border border-[#0F766E]/20">
+                    <span className="material-symbols-outlined text-[14px] text-[#004540]">
                       verified
                     </span>
                     <span>{cat.traceability}</span>
@@ -121,7 +121,7 @@ export default function ServicesOverview() {
                   <h4 className="text-xs font-bold uppercase tracking-wider text-[#121c2a] mb-2.5">
                     Covered Scope &amp; Parameters:
                   </h4>
-                  <ul className="space-y-2 text-xs text-[#64748B]">
+                  <ul className="space-y-2 text-xs text-slate-700">
                     {cat.features.map((feat) => (
                       <li key={feat} className="flex items-start gap-2">
                         <span className="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">
@@ -155,21 +155,21 @@ export default function ServicesOverview() {
           <div className="pt-4 md:pt-0 px-4">
             <span className="material-symbols-outlined text-[#0F766E] text-3xl mb-2">precision_manufacturing</span>
             <h4 className="font-heading font-bold text-lg text-[#121c2a]">37+ Master Instruments</h4>
-            <p className="text-xs text-[#64748B] mt-1">
+            <p className="text-xs text-slate-700 mt-1">
               Low Pressure Calibrators, Decade Resistance Boxes, Gauge Blocks ('0' Grade), Surface Plates, and Aerosol Photometers.
             </p>
           </div>
           <div className="pt-4 md:pt-0 px-4">
             <span className="material-symbols-outlined text-[#0F766E] text-3xl mb-2">sensors</span>
             <h4 className="font-heading font-bold text-lg text-[#121c2a]">Validation Standards</h4>
-            <p className="text-xs text-[#64748B] mt-1">
+            <p className="text-xs text-slate-700 mt-1">
               Wireless (-40 to 70°C &amp; 0-100% RH) &amp; Wired 21 CFR Part 11 compliant data loggers (-80 to +1200°C) with national/international traceability.
             </p>
           </div>
           <div className="pt-4 md:pt-0 px-4">
             <span className="material-symbols-outlined text-[#0F766E] text-3xl mb-2">domain</span>
             <h4 className="font-heading font-bold text-lg text-[#121c2a]">In-House &amp; Regional Reach</h4>
-            <p className="text-xs text-[#64748B] mt-1">
+            <p className="text-xs text-slate-700 mt-1">
               In-house Stability Chambers and Dry Block Calibrators in {siteConfig.address.street}, {siteConfig.address.district}, plus regional centres in MP, Sikkim &amp; Ahmedabad.
             </p>
           </div>

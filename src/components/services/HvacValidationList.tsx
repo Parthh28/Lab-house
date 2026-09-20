@@ -6,7 +6,7 @@ export default function HvacValidationList() {
       <div className="max-w-7xl mx-auto space-y-10">
         <div className="border-b border-gray-200 pb-6 flex flex-col sm:flex-row justify-between sm:items-center gap-4">
           <div>
-            <span className="text-[#0F766E] font-semibold text-xs uppercase tracking-wider bg-[#F0FDFA] px-3 py-1 rounded-full border border-[#0F766E]/20">
+            <span className="text-[#004540] font-bold text-xs uppercase tracking-wider bg-[#F0FDFA] px-3 py-1 rounded-full border border-teal-300">
               Cleanroom ISO 14644 Compliance
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[--color-text-primary] mt-2">
@@ -22,7 +22,7 @@ export default function HvacValidationList() {
           {hvacValidationScope.map((hvac) => (
             <div key={hvac.name} className="bg-white border border-[--color-border] rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-4">
               <div className="space-y-3">
-                <div className="w-12 h-12 rounded-xl bg-[#F0FDFA] text-[#0F766E] flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-[#F0FDFA] text-[#005c55] flex items-center justify-center">
                   <span className="material-symbols-outlined text-2xl">air</span>
                 </div>
                 <h3 className="font-heading font-bold text-xl text-[--color-text-primary]">
@@ -32,7 +32,7 @@ export default function HvacValidationList() {
                   {hvac.detail}
                 </p>
               </div>
-              <div className="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-[#0F766E]">
+              <div className="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-[#005c55]">
                 <span>Aerosol Photometer / Particle Counter</span>
                 <span className="material-symbols-outlined text-base">verified_user</span>
               </div>

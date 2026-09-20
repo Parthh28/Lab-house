@@ -6,14 +6,14 @@ import SplashScreen from "@/components/layout/SplashScreen";
 
 export const metadata: Metadata = {
   title: {
-    default: "Lab House — Precision Calibration Services | ISO 17025 Certified",
+    default: "Lab House — Precision Calibration Services | ISO 2017 Certified",
     template: "%s | Lab House Calibration",
   },
   description:
-    "Fast, accurate, and affordable ISO/IEC 17025 certified & NABL accredited calibration services. 2-hour emergency response. Serving all industrial sectors.",
+    "Fast, accurate, and affordable ISO 2017 certified & NABL accredited calibration services. 2-hour emergency response. Serving all industrial sectors.",
   keywords: [
     "calibration services",
-    "ISO 17025",
+    "ISO 2017",
     "NABL accredited",
     "precision measurement",
     "instrument calibration",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lab House — Precision Calibration Services",
     description:
-      "ISO 17025 certified calibration. Fast turnaround, emergency support, competitive pricing.",
+      "ISO 2017 certified calibration. Fast turnaround, emergency support, competitive pricing.",
     url: "https://labhouse.com",
     siteName: "Lab House",
     locale: "en_US",

@@ -48,6 +48,10 @@ function checkLimit(
   maxRequests: number,
   windowMs: number
 ): { allowed: boolean; retryAfterMs: number } {
+  if (process.env.NODE_ENV === "development") {
+    return { allowed: true, retryAfterMs: 0 };
+  }
+
   cleanup();
   const now = Date.now();
   const entry = limiter.get(key);
