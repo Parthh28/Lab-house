@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab House Calibration Services | ISO 2017 NABL Accredited Laboratory</title>
+  <meta name="description" content="ISO 2017 NABL Accredited Laboratory for Mechanical, Electro-Technical & Thermal Discipline. Providing excellence in Calibration, Thermal Validation & HVAC Validation since 1999 across India.">
+  <link rel="icon" href="assets/images/favicon.ico">
+
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,100..1000&family=Red+Hat+Display:wght@600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#005c55',
+            'primary-dark': '#004540',
+            'primary-container': '#0f766e',
+            accent: '#99F6E4',
+            orange: '#F97316',
+            'orange-hover': '#EA580C',
+            'bg-section': '#F0FDFA',
+            'text-primary': '#121c2a',
+            'text-secondary': '#475569',
+            'border-gray': '#D1D5DB',
+            'surface-teal': '#F0FDFA',
+            'surface-container-low': '#eff4ff',
+            'on-surface': '#121c2a',
+          },
+          fontFamily: {
+            heading: ['"Red Hat Display"', 'sans-serif'],
+            body: ['"Google Sans Flex"', '"Google Sans"', 'sans-serif'],
+            sans: ['"Google Sans Flex"', '"Google Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css?v=2.3">
+
+  <!-- Immediate Splash Suppression on Internal Navigation -->
+  <script>
+    if (document.referrer && document.referrer.indexOf(location.host) !== -1) {
+      var nav = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+      var isReload = nav ? nav.type === "reload" : (performance.navigation && performance.navigation.type === 1);
+      if (!isReload) {
+        document.documentElement.classList.add("skip-splash");
+      }
+    }
+  </script>
+
+  <!-- JSON-LD SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Lab House",
+    "description": "ISO 2017 NABL Accredited Laboratory for Mechanical, Electro-Technical & Thermal Discipline. Established in 1999 by Mr. Hitesh P. Mehta.",
+    "image": "assets/images/hero-lab.jpg",
+    "url": "https://labhouse.net",
+    "telephone": "+919326050186",
+    "email": "contact@labhouse.net",
+    "founder": {
+      "@type": "Person",
+      "name": "Mr. Hitesh P. Mehta",
+      "jobTitle": "Chief Executive / Technical Head"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "207, Tirupati Trade Centre, Navghar Road",
+      "addressLocality": "Vasai (E), Dist: Palghar",
+      "addressRegion": "Maharashtra",
+      "postalCode": "401210",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+</head>
+<body class="min-h-full flex flex-col font-body bg-[#f8f9ff] text-[#121c2a]">
+
+  <!-- Splash Screen - NABL Logo wipe-up reveal -->
+  <div id="splash-screen">
+    <img id="splash-nabl-logo" src="assets/images/nabl-logo.png" alt="NABL Logo">
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white sticky top-0 h-16 w-full z-50 border-b border-slate-200/80 shadow-xs text-slate-800 backdrop-blur-md bg-white/95">
+    <div class="flex justify-between items-center px-4 sm:px-6 md:px-8 w-full h-full max-w-7xl mx-auto">
+      <!-- Logo & Accreditation Tag -->
+      <a class="flex items-center gap-2.5 hover:opacity-95 transition-opacity shrink-0" href="index.html">
+        <img src="assets/images/logo.png" alt="Lab House Logo" class="h-8 w-8 object-contain rounded-sm">
+        <div class="flex flex-col">
+          <span class="text-lg font-bold text-slate-900 tracking-tight leading-tight">Lab House</span>
+          <span class="text-[11px] font-semibold text-[#0F766E] flex items-center gap-1">
+            <span class="material-symbols-outlined text-[13px]">verified</span>
+            ISO 2017 NABL Accredited Laboratory
+          </span>
+        </div>
+      </a>
+
+      <!-- Center Navigation -->
+      <nav class="hidden md:flex gap-7 h-full items-center text-[15px]">
+        <a class="nav-link text-[#0F766E] font-semibold border-b-[3px] border-[#0F766E] pt-1 duration-200 ease-in-out h-full flex items-center" href="index.html">Home</a>
+        <a class="nav-link text-slate-600 hover:text-[#0F766E] hover:border-b-2 hover:border-[#0F766E]/40 transition-all duration-200 ease-in-out h-full flex items-center" href="services.html">Services</a>
+        <a class="nav-link text-slate-600 hover:text-[#0F766E] hover:border-b-2 hover:border-[#0F766E]/40 transition-all duration-200 ease-in-out h-full flex items-center" href="about.html">About Us</a>
+        <a class="nav-link text-slate-600 hover:text-[#0F766E] hover:border-b-2 hover:border-[#0F766E]/40 transition-all duration-200 ease-in-out h-full flex items-center" href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Right Action Items -->
+      <div class="hidden md:flex items-center gap-5">
+        <a class="bg-[#EA580C] hover:bg-[#C2410C] text-white px-5 py-2.5 rounded-full font-semibold transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-sm text-[14px]" href="contact.html">
+          Get a Quote
+        </a>
+        <div class="w-px h-6 bg-slate-200"></div>
+        <a href="login.html" class="text-slate-700 hover:text-[#0F766E] font-medium transition-colors text-[14px] flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[18px]">login</span>
+          Client Login
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-slate-700 hover:text-[#0F766E] p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#0F766E]" aria-label="Toggle Navigation">
+        <span id="mobile-menu-icon" class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-drawer" class="mobile-drawer md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3 shadow-xl text-slate-800">
+      <div class="pb-2 border-b border-slate-100 flex items-center gap-1.5 text-xs font-semibold text-[#0F766E]">
+        <span class="material-symbols-outlined text-sm">verified</span>
+        ISO 2017 NABL Accredited Laboratory
+      </div>
+      <a class="mobile-nav-link block font-semibold text-[#0F766E] py-1 border-l-4 border-[#0F766E] pl-3" href="index.html">Home</a>
+      <a class="mobile-nav-link block font-medium text-slate-600 hover:text-[#0F766E] py-1 pl-4" href="services.html">Services</a>
+      <a class="mobile-nav-link block font-medium text-slate-600 hover:text-[#0F766E] py-1 pl-4" href="about.html">About Us</a>
+      <a class="mobile-nav-link block font-medium text-slate-600 hover:text-[#0F766E] py-1 pl-4" href="contact.html">Contact</a>
+      <div class="pt-2 flex flex-col gap-3">
+        <a class="block w-full text-center bg-[#EA580C] hover:bg-[#C2410C] text-white px-4 py-2.5 rounded-full font-semibold transition-colors shadow-md text-sm" href="contact.html">Get a Quote</a>
+        <a class="w-full flex items-center justify-center gap-2 border border-slate-200 hover:bg-slate-50 text-slate-700 px-4 py-2.5 rounded-full font-medium transition-colors text-sm" href="login.html">
+          <span class="material-symbols-outlined text-[18px]">login</span>
+          Client Login
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-16 pb-20 px-6 md:px-10 relative overflow-hidden text-white">
+      <!-- Decorative background lighting -->
+      <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#99F6E4]/10 rounded-full blur-2xl -ml-20 -mb-20 pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+        <!-- Left Column: Text & CTAs (7 cols) -->
+        <div class="lg:col-span-7 space-y-6 animate-fade-in-up">
+          <div class="flex flex-wrap gap-3">
+            <span class="inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded-full bg-[#99F6E4] text-[#003732] font-bold">
+              <span class="material-symbols-outlined text-[14px]">verified</span>
+              ISO 2017 NABL Accredited Laboratory
+            </span>
+            <span class="inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded-full bg-white/15 text-white font-semibold border border-white/25">
+              <span class="material-symbols-outlined text-[14px]">history</span>
+              Excellence Since 1999
+            </span>
+            <span class="inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded-full bg-white/15 text-white font-semibold border border-white/25">
+              <span class="material-symbols-outlined text-[14px]">bolt</span>
+              2-Hour Emergency Turnaround
+            </span>
+          </div>
+
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-[54px] font-bold text-white tracking-tight leading-[1.15]">
+            Excellence in Measurement &amp; Validation
+          </h1>
+
+          <p class="font-body text-white/90 text-lg sm:text-xl max-w-2xl leading-relaxed">
+            ISO 2017 NABL Accredited Laboratory for Mechanical, Electro-Technical, and Thermal disciplines. Serving Pharmaceutical, Engineering, and Chemical industries across India since 1999.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="contact.html" class="inline-flex items-center justify-center font-medium rounded-full transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] bg-[#EA580C] hover:bg-[#C2410C] text-white shadow-sm font-semibold text-base py-3.5 px-8">
+              Request a Quote
+            </a>
+            <a href="services.html" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-medium px-7 py-3.5 rounded-full border border-white/30 transition-all duration-200">
+              <span>Explore Scope &amp; Services</span>
+              <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </a>
+          </div>
+
+          <!-- Quick Trust Highlights -->
+          <div class="pt-6 border-t border-white/15 grid grid-cols-3 gap-4 max-w-lg text-xs sm:text-sm text-white font-medium">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-teal-200">check_circle</span>
+              <span>NABL &amp; ISO 2017</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-teal-200">verified_user</span>
+              <span>ALCOA QMS Compliant</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-teal-200">apartment</span>
+              <span>Vasai (E), Palghar &amp; PAN India</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Laboratory Image Card (5 cols) -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end animate-fade-in">
+          <div class="relative w-full max-w-lg mx-auto group">
+            <!-- Ambient background glow -->
+            <div class="absolute -inset-1 bg-gradient-to-r from-teal-400 to-emerald-400 rounded-3xl blur-xl opacity-25 group-hover:opacity-40 transition duration-500 pointer-events-none"></div>
+
+            <!-- Main Image Container -->
+            <div class="relative rounded-2xl overflow-hidden border border-white/25 shadow-2xl bg-white/10 backdrop-blur-md">
+              <div class="relative aspect-[4/3] w-full overflow-hidden">
+                <img src="assets/images/hero-lab.jpg" alt="Lab House Metrology &amp; Calibration Laboratory" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#003732]/85 via-transparent to-black/30"></div>
+              </div>
+
+              <!-- Floating Top Badge -->
+              <div class="absolute top-4 left-4 flex items-center">
+                <span class="bg-[#004540]/85 backdrop-blur-md text-teal-200 text-xs font-semibold px-3.5 py-1.5 rounded-full border border-white/20 flex items-center gap-1.5 shadow-md">
+                  <span class="material-symbols-outlined text-sm text-teal-300">verified</span>
+                  NABL Accredited Facility
+                </span>
+              </div>
+
+              <!-- Bottom Info Overlay -->
+              <div class="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-white shadow-lg">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-xs font-bold text-teal-200 tracking-wide uppercase">Metrology &amp; Validation Center</p>
+                    <h4 class="text-sm sm:text-base font-bold text-white mt-0.5">Thermal, Mechanical &amp; Electro-Technical</h4>
+                  </div>
+                  <div class="w-10 h-10 rounded-lg bg-teal-400/20 border border-teal-300/30 flex items-center justify-center shrink-0 text-teal-200">
+                    <span class="material-symbols-outlined text-xl">precision_manufacturing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Stats Bar -->
+    <section class="bg-surface-teal py-8 md:py-10 border-y border-[#D1D5DB]">
+      <div class="max-w-7xl mx-auto px-6 md:px-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white p-6 rounded-xl border border-[#D1D5DB] shadow-[0_1px_3px_rgba(0,0,0,0.08)] flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-[#005c55] shrink-0">
+              <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">history</span>
+            </div>
+            <div>
+              <div class="font-heading text-2xl text-[#121c2a] font-bold">Since 1999</div>
+              <div class="font-body text-slate-600 text-xs font-medium">25+ Years of Metrology Excellence</div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-[#D1D5DB] shadow-[0_1px_3px_rgba(0,0,0,0.08)] flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-[#005c55] shrink-0">
+              <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+            </div>
+            <div>
+              <div class="font-heading text-2xl text-[#121c2a] font-bold">ISO 2017</div>
+              <div class="font-body text-slate-600 text-xs font-medium">NABL Accredited Laboratory</div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-[#D1D5DB] shadow-[0_1px_3px_rgba(0,0,0,0.08)] flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-[#005c55] shrink-0">
+              <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+            </div>
+            <div>
+              <div class="font-heading text-2xl text-[#121c2a] font-bold">37+ Master</div>
+              <div class="font-body text-slate-600 text-xs font-medium">Calibrated Standards &amp; Instruments</div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-[#D1D5DB] shadow-[0_1px_3px_rgba(0,0,0,0.08)] flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-[#005c55] shrink-0">
+              <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">timer</span>
+            </div>
+            <div>
+              <div class="font-heading text-2xl text-[#121c2a] font-bold">2-Hour</div>
+              <div class="font-body text-slate-600 text-xs font-medium">Complaint &amp; Quote Guarantee</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section class="bg-[#F0FDFA] py-20 px-6 md:px-10">
+      <div class="max-w-7xl mx-auto space-y-12">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <span class="text-[#005c55] font-semibold text-sm tracking-wider uppercase bg-[#005c55]/10 px-3 py-1 rounded-full">
+            Accredited Capabilities
+          </span>
+          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#121c2a]">
+            Our Core Calibration &amp; Validation Capabilities
+          </h2>
+          <p class="font-body text-slate-700 text-base sm:text-lg">
+            Operating under ISO 2017 NABL Accredited Laboratory, Lab House delivers comprehensive
+            measurement, thermal validation, and HVAC cleanroom testing with full ALCOA quality adherence.
+          </p>
+        </div>
+
+        <!-- 3 Core Categories Cards Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Card 1: Calibration -->
+          <div class="bg-white border border-[#D1D5DB] rounded-xl p-7 shadow-[0_1px_3px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between h-full">
+            <div class="space-y-5">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 bg-[#F0FDFA] rounded-lg flex items-center justify-center text-[#005c55]">
+                  <span class="material-symbols-outlined">straighten</span>
+                </div>
+                <span class="bg-[#005c55]/10 text-[#004540] text-xs font-bold px-3 py-1 rounded-full border border-[#005c55]/20">
+                  ISO 2017 &amp; NABL
+                </span>
+              </div>
+
+              <h3 class="font-heading font-bold text-2xl text-[#121c2a]">Calibration Services</h3>
+
+              <p class="font-body text-sm text-slate-700 leading-relaxed">
+                Precision accredited calibration for 10 core industrial measurement parameters using 37 specialized master instruments with full unbroken chain of national/international traceability.
+              </p>
+
+              <div class="pt-1 pb-1 flex flex-wrap gap-2 text-xs">
+                <span class="bg-gray-100 text-gray-800 px-3 py-1.5 rounded-md flex items-center gap-1.5 font-medium border border-gray-200">
+                  <span class="material-symbols-outlined text-[14px] text-[#005c55]">schedule</span>
+                  <span>Standard &amp; Express Available</span>
+                </span>
+                <span class="bg-[#F0FDFA] text-[#004540] px-3 py-1.5 rounded-md flex items-center gap-1.5 font-semibold border border-[#0F766E]/20">
+                  <span class="material-symbols-outlined text-[14px] text-[#004540]">verified</span>
+                  <span>National / International Traceable</span>
+                </span>
+              </div>
+
+              <div class="pt-4 border-t border-gray-100">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-[#121c2a] mb-2.5">Covered Scope &amp; Parameters:</h4>
+                <ul class="space-y-2 text-xs text-slate-700">
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>Pressure &amp; Vacuum (-1 to 700 bar)</span></li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>Temperature (-199.99°C to +1300°C) &amp; Relative Humidity</span></li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>Dimensions (Calipers, Micrometers, Gauge Blocks)</span></li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>pH / Conductivity &amp; Decade Resistance</span></li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>Electrical, Electro-Technical &amp; Power Supply</span></li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>Weights / Weighing Scales (1 mg to 15 kg)</span></li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>RPM Tachometers &amp; Precision Time/Timers</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-[#D1D5DB]/60">
+              <a href="services.html#calibration" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#005c55] hover:text-[#004540] group">
+                <span>Explore Master Equipment &amp; Scope Specs</span>
+                <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: Thermal Validation -->
+          <div class="bg-white border border-[#D1D5DB] rounded-xl p-7 shadow-[0_1px_3px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between h-full">
+            <div class="space-y-5">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 bg-[#F0FDFA] rounded-lg flex items-center justify-center text-[#005c55]">
+                  <span class="material-symbols-outlined">thermostat</span>
+                </div>
+                <span class="bg-[#005c55]/10 text-[#004540] text-xs font-bold px-3 py-1 rounded-full border border-[#005c55]/20">
+                  21 CFR Part 11 Compliant
+                </span>
+              </div>
+
+              <h3 class="font-heading font-bold text-2xl text-[#121c2a]">Thermal Validation Services</h3>
+
+              <p class="font-body text-sm text-slate-700 leading-relaxed">
+                Comprehensive multi-point thermal mapping and validation across critical controlled environments using high-accuracy wireless and wired data loggers traceable to national standards.
+              </p>
+
+              <div class="pt-1 pb-1 flex flex-wrap gap-2 text-xs">
+                <span class="bg-gray-100 text-gray-800 px-3 py-1.5 rounded-md flex items-center gap-1.5 font-medium border border-gray-200">
+                  <span class="material-symbols-outlined text-[14px] text-[#005c55]">schedule</span>
+                  <span>On-Site &amp; In-House Facility</span>
+                </span>
+                <span class="bg-[#F0FDFA] text-[#004540] px-3 py-1.5 rounded-md flex items-center gap-1.5 font-semibold border border-[#0F766E]/20">
+                  <span class="material-symbols-outlined text-[14px] text-[#004540]">verified</span>
+                  <span>National/International (±0.5°C)</span>
+                </span>
+              </div>
+
+              <div class="pt-4 border-t border-gray-100">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-[#121c2a] mb-2.5">Covered Scope &amp; Parameters:</h4>
+                <ul class="space-y-2 text-xs text-slate-700">
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>Area &amp; Warehouse Temperature Mapping</span></li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>Walk-in type Stability Chambers (0 to 70°C, 0-100% RH)</span></li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>Incubators, Refrigerators &amp; Cold Rooms/Chambers</span></li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>Autoclaves &amp; Dry Heat Sterilizers</span></li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>Industrial Ovens, Furnaces &amp; Sterilization Tunnels</span></li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>In-House Deep Freezer (-80 to 50°C) &amp; Dry Block Calibrators</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-[#D1D5DB]/60">
+              <a href="services.html#thermal" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#005c55] hover:text-[#004540] group">
+                <span>Explore Master Equipment &amp; Scope Specs</span>
+                <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: HVAC Validation -->
+          <div class="bg-white border border-[#D1D5DB] rounded-xl p-7 shadow-[0_1px_3px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between h-full">
+            <div class="space-y-5">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 bg-[#F0FDFA] rounded-lg flex items-center justify-center text-[#005c55]">
+                  <span class="material-symbols-outlined">air</span>
+                </div>
+                <span class="bg-[#005c55]/10 text-[#004540] text-xs font-bold px-3 py-1 rounded-full border border-[#005c55]/20">
+                  Cleanroom Compliance
+                </span>
+              </div>
+
+              <h3 class="font-heading font-bold text-2xl text-[#121c2a]">HVAC Validation Services</h3>
+
+              <p class="font-body text-sm text-slate-700 leading-relaxed">
+                Rigorous cleanroom, laminar flow, and HVAC validation protocols utilizing calibrated Aerosol Photometers and air flow instrumentation to ensure total environmental safety.
+              </p>
+
+              <div class="pt-1 pb-1 flex flex-wrap gap-2 text-xs">
+                <span class="bg-gray-100 text-gray-800 px-3 py-1.5 rounded-md flex items-center gap-1.5 font-medium border border-gray-200">
+                  <span class="material-symbols-outlined text-[14px] text-[#005c55]">schedule</span>
+                  <span>On-Site Specialist Team</span>
+                </span>
+                <span class="bg-[#F0FDFA] text-[#004540] px-3 py-1.5 rounded-md flex items-center gap-1.5 font-semibold border border-[#0F766E]/20">
+                  <span class="material-symbols-outlined text-[14px] text-[#004540]">verified</span>
+                  <span>ISO Standards</span>
+                </span>
+              </div>
+
+              <div class="pt-4 border-t border-gray-100">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-[#121c2a] mb-2.5">Covered Scope &amp; Parameters:</h4>
+                <ul class="space-y-2 text-xs text-slate-700">
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>Airborne Particle Count (APC) Testing</span></li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>Filter Integrity Test (PAO / DOP Aerosol Photometer)</span></li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>Air Velocity &amp; Uniformity Testing</span></li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>Air Flow Pattern &amp; Visualization Studies</span></li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>Comprehensive Air Balancing &amp; ACH Calculation</span></li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#005c55] text-[16px] shrink-0 mt-0.5">check_circle</span><span>Laminar Air Flow (LAF) &amp; Reverse LAF (RLAF) Validation</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-[#D1D5DB]/60">
+              <a href="services.html#hvac" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#005c55] hover:text-[#004540] group">
+                <span>Explore Master Equipment &amp; Scope Specs</span>
+                <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Master Instruments & Validation Summary Strip -->
+        <div class="bg-white border border-[#D1D5DB] rounded-2xl p-6 md:p-8 shadow-sm grid grid-cols-1 md:grid-cols-3 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-gray-200">
+          <div class="pt-4 md:pt-0 px-4">
+            <span class="material-symbols-outlined text-[#0F766E] text-3xl mb-2">precision_manufacturing</span>
+            <h4 class="font-heading font-bold text-lg text-[#121c2a]">37+ Master Instruments</h4>
+            <p class="text-xs text-slate-700 mt-1">
+              Low Pressure Calibrators, Decade Resistance Boxes, Gauge Blocks ('0' Grade), Surface Plates, and Aerosol Photometers.
+            </p>
+          </div>
+          <div class="pt-4 md:pt-0 px-4">
+            <span class="material-symbols-outlined text-[#0F766E] text-3xl mb-2">sensors</span>
+            <h4 class="font-heading font-bold text-lg text-[#121c2a]">Validation Standards</h4>
+            <p class="text-xs text-slate-700 mt-1">
+              Wireless (-40 to 70°C &amp; 0-100% RH) &amp; Wired 21 CFR Part 11 compliant data loggers (-80 to +1200°C) with national/international traceability.
+            </p>
+          </div>
+          <div class="pt-4 md:pt-0 px-4">
+            <span class="material-symbols-outlined text-[#0F766E] text-3xl mb-2">domain</span>
+            <h4 class="font-heading font-bold text-lg text-[#121c2a]">In-House &amp; Regional Reach</h4>
+            <p class="text-xs text-slate-700 mt-1">
+              In-house Stability Chambers and Dry Block Calibrators in Vasai (E), Palghar, plus regional centres in MP, Sikkim &amp; Ahmedabad.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom CTA to view all -->
+        <div class="text-center pt-4">
+          <a href="services.html" class="inline-flex items-center gap-2 bg-[#0F766E] text-white hover:bg-[#0d625b] font-medium px-8 py-4 rounded-full shadow-md transition-all duration-200">
+            <span>View Full Scope of 37 Instruments &amp; Validation Standards</span>
+            <span class="material-symbols-outlined text-lg">library_books</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us & ALCOA Section -->
+    <section class="py-20 px-6 md:px-10 bg-white">
+      <div class="max-w-7xl mx-auto space-y-12">
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <span class="text-[#005c55] font-semibold text-sm tracking-wider uppercase bg-[#005c55]/10 px-3 py-1 rounded-full">
+            The Lab House Difference
+          </span>
+          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#121c2a]">
+            Why Industry Leaders Choose Lab House
+          </h2>
+          <p class="font-body text-slate-600 text-base sm:text-lg">
+            We combine rigorous metrological precision with modern digital workflow automation to deliver unmatched speed, accuracy, and compliance.
+          </p>
+        </div>
+
+        <!-- 3 Pillars Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-[#f8f9ff] border border-[#D1D5DB]/80 rounded-2xl p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 relative overflow-hidden group">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-[#005c55] group-hover:bg-[#EA580C] transition-colors"></div>
+            <div class="space-y-5">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 bg-[#F0FDFA] rounded-lg flex items-center justify-center text-[#005c55]">
+                  <span class="material-symbols-outlined">support_agent</span>
+                </div>
+                <span class="text-xs font-bold text-[#C2410C] bg-orange-50 px-3 py-1 rounded-full border border-orange-300">
+                  2-Hour Response Guarantee
+                </span>
+              </div>
+              <h3 class="font-heading font-bold text-xl text-[#121c2a]">Rapid Customer Service Response</h3>
+              <p class="font-body text-sm text-slate-600 leading-relaxed">
+                We respond to customer inquiries and complaints within two working hours of receipt, and provide comprehensive review and clarification within 2 working days.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#D1D5DB]/60 flex items-center gap-2 text-xs font-semibold text-[#005c55]">
+              <span class="material-symbols-outlined text-base">task_alt</span>
+              <span>90%+ Customer Satisfaction Objective</span>
+            </div>
+          </div>
+
+          <div class="bg-[#f8f9ff] border border-[#D1D5DB]/80 rounded-2xl p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 relative overflow-hidden group">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-[#005c55] group-hover:bg-[#EA580C] transition-colors"></div>
+            <div class="space-y-5">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 bg-[#F0FDFA] rounded-lg flex items-center justify-center text-[#005c55]">
+                  <span class="material-symbols-outlined">verified_user</span>
+                </div>
+                <span class="text-xs font-bold text-[#C2410C] bg-orange-50 px-3 py-1 rounded-full border border-orange-300">
+                  ISO 2017 &amp; NABL
+                </span>
+              </div>
+              <h3 class="font-heading font-bold text-xl text-[#121c2a]">ALCOA Quality Management Systems</h3>
+              <p class="font-body text-sm text-slate-600 leading-relaxed">
+                Rigorous use of Standard Operating Procedures (SOPs) and ALCOA principles. All technical personnel undergo half-yearly training on laboratory SWPs and ISO requirements.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#D1D5DB]/60 flex items-center gap-2 text-xs font-semibold text-[#005c55]">
+              <span class="material-symbols-outlined text-base">task_alt</span>
+              <span>Periodic Reviews &amp; Strict Compliance</span>
+            </div>
+          </div>
+
+          <div class="bg-[#f8f9ff] border border-[#D1D5DB]/80 rounded-2xl p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 relative overflow-hidden group">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-[#005c55] group-hover:bg-[#EA580C] transition-colors"></div>
+            <div class="space-y-5">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 bg-[#F0FDFA] rounded-lg flex items-center justify-center text-[#005c55]">
+                  <span class="material-symbols-outlined">analytics</span>
+                </div>
+                <span class="text-xs font-bold text-[#C2410C] bg-orange-50 px-3 py-1 rounded-full border border-orange-300">
+                  National &amp; International Standards
+                </span>
+              </div>
+              <h3 class="font-heading font-bold text-xl text-[#121c2a]">Unbroken Chain of Traceability</h3>
+              <p class="font-body text-sm text-slate-600 leading-relaxed">
+                Full measurement traceability to National and International standards with continuous comparisons against higher nodal accredited laboratories using state-of-the-art equipment.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#D1D5DB]/60 flex items-center gap-2 text-xs font-semibold text-[#005c55]">
+              <span class="material-symbols-outlined text-base">task_alt</span>
+              <span>37+ Specialized Master Instruments</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TestimonialSection / Clients by Category -->
+    <section class="py-20 px-6 md:px-10 bg-[#F0FDFA]">
+      <div class="max-w-7xl mx-auto space-y-12">
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <span class="text-[#005c55] font-semibold text-sm tracking-wider uppercase bg-[#005c55]/10 px-3 py-1 rounded-full">
+            Our Valued Clientele
+          </span>
+          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#121c2a]">
+            Trusted by Leading Industries Across India
+          </h2>
+          <p class="font-body text-slate-700 text-base sm:text-lg">
+            For over 25 years, Lab House has served top-tier enterprises across Pharmaceutical, Engineering, Chemical, and Public Sector industries with complete NABL and ISO 2017 traceability.
+          </p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div id="client-tabs-container" class="flex flex-wrap justify-center gap-3">
+          <!-- Populated by js/home.js with exact styling -->
+        </div>
+
+        <!-- Client Grid Container -->
+        <div class="bg-white border border-[#D1D5DB] rounded-2xl p-8 shadow-sm">
+          <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#D1D5DB]/60">
+            <h3 class="font-heading font-bold text-xl text-[#121c2a] flex items-center gap-2.5">
+              <span id="client-category-icon" class="material-symbols-outlined text-[#005c55] text-2xl">medication</span>
+              <span id="client-category-title">Pharmaceutical Companies</span>
+            </h3>
+            <span class="text-xs text-slate-700 bg-gray-100 px-3 py-1 rounded-full font-medium border border-gray-200">
+              Full NABL Traceability &amp; ALCOA QMS Compliance
+            </span>
+          </div>
+
+          <div id="client-category-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Populated by js/home.js -->
+          </div>
+        </div>
+
+        <!-- Code of Ethics Commitment Banner -->
+        <div class="bg-gradient-to-r from-[#0F766E] to-[#0d625b] text-white p-8 rounded-2xl shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-2 max-w-3xl">
+            <div class="flex items-center gap-2 text-teal-200 text-xs font-bold uppercase tracking-wider">
+              <span class="material-symbols-outlined text-base">gavel</span>
+              <span>Lab House Code of Ethics Commitment</span>
+            </div>
+            <h4 class="font-heading font-bold text-xl sm:text-2xl">
+              Impartiality, Confidentiality &amp; Absolute Integrity
+            </h4>
+            <p class="text-white text-sm leading-relaxed">
+              We strictly adhere to 12 ethical pillars: ensuring reliability of results, preserving complete confidentiality of client calibration data, avoiding all conflicts of interest, and upholding ALCOA measurement integrity.
+            </p>
+          </div>
+          <div class="shrink-0">
+            <a href="about.html#code-of-ethics" class="bg-white text-[#004540] hover:bg-teal-50 font-bold px-6 py-3 rounded-full shadow transition-colors text-sm inline-flex items-center gap-2">
+              <span>Read Full Code of Ethics</span>
+              <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-[#005c55] py-20 px-6 md:px-10 text-white relative overflow-hidden">
+      <!-- Background radial highlight -->
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(153,246,228,0.12),transparent_60%)] pointer-events-none"></div>
+
+      <div class="max-w-5xl mx-auto text-center space-y-8 relative z-10">
+        <span class="inline-flex items-center gap-2 bg-white/15 text-teal-200 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full border border-white/25">
+          <span class="material-symbols-outlined text-[16px]">verified_user</span>
+          <span>ISO 2017 NABL Accredited Laboratory</span>
+        </span>
+
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight max-w-4xl mx-auto">
+          Ready to Calibrate &amp; Validate Your Critical Instruments?
+        </h2>
+
+        <p class="font-body text-white text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
+          Contact our Vasai (E) laboratory or speak with our ISO 2017 NABL Accredited Laboratory specialists directly. Full ALCOA compliance guaranteed.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+          <a href="contact.html" class="inline-flex items-center justify-center font-medium rounded-full transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] bg-[#EA580C] hover:bg-[#C2410C] text-white shadow-xl font-semibold text-base py-3.5 px-8">
+            Request Calibration Quote
+          </a>
+          <a href="tel:+919326050186" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-medium px-7 py-3.5 rounded-full border border-white/30 transition-all duration-200">
+            <span class="material-symbols-outlined text-lg">call</span>
+            <span>Call Direct: +91 9326050186 / +91 9225211221</span>
+          </a>
+        </div>
+
+        <div class="pt-8 border-t border-white/15 flex flex-wrap justify-center gap-8 text-xs sm:text-sm text-white font-medium">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-teal-200 text-base">timer</span>
+            <span>2-Hour Quote Guarantee</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-teal-200 text-base">local_shipping</span>
+            <span>Free Instrument Pickup &amp; Return Available</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-teal-200 text-base">verified</span>
+            <span>Complete Audit Readiness</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0F766E] text-white py-10 px-6 md:px-10 border-t border-white/10 font-body-sm mt-auto">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-white/20">
+      <!-- Company Info (7 cols) -->
+      <div class="md:col-span-7 md:pr-10 md:border-r md:border-white/20">
+        <div class="flex items-center gap-2 mb-3">
+          <img src="assets/images/logo.png" alt="Lab House Logo" class="h-8 w-8 object-contain rounded-sm bg-white p-0.5">
+          <span class="font-heading font-bold text-xl text-white tracking-tight">Lab House</span>
+        </div>
+        <p class="text-white/95 text-[14px] leading-relaxed mb-4 max-w-sm">
+          ISO 2017 NABL Accredited Laboratory for Mechanical, Electro-Technical &amp; Thermal Discipline. Providing excellence in Calibration, Thermal Validation &amp; HVAC Validation since 1999.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-white/15 text-white text-[12px] font-semibold px-2.5 py-1 rounded border border-white/25">ISO 2017</span>
+          <span class="bg-white/15 text-white text-[12px] font-semibold px-2.5 py-1 rounded border border-white/25">NABL Accredited</span>
+          <span class="bg-white/15 text-white text-[12px] font-semibold px-2.5 py-1 rounded border border-white/25">ALCOA QMS</span>
+        </div>
+      </div>
+
+      <!-- Contact (5 cols) -->
+      <div class="md:col-span-5 md:pl-10">
+        <h4 class="font-heading font-semibold text-white text-[16px] mb-4 tracking-wide">Contact Us</h4>
+        <ul class="space-y-3 text-[14px] text-white/95">
+          <li class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-teal-200 text-[18px]">mail</span>
+            <a class="hover:text-teal-200 transition-colors" href="mailto:contact@labhouse.net">contact@labhouse.net</a>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="material-symbols-outlined text-teal-200 text-[18px] mt-0.5">call</span>
+            <div>
+              <a class="hover:text-teal-200 transition-colors block font-medium" href="tel:+919326050186">+91 9326050186 / +91 9225211221</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="material-symbols-outlined text-teal-200 text-[18px] mt-0.5">location_on</span>
+            <span>205, Tirupati Trade Centre, Navghar Road, Vasai (E), Dist: Palghar – 401208, Maharashtra, India</span>
+          </li>
+          <li class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-teal-200 text-[18px]">person</span>
+            <span>Chief Executive: Mr. Hitesh P. Mehta</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright & Legal -->
+    <div class="max-w-7xl mx-auto pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px] text-white/90">
+      <div>
+        &copy; <span id="current-year">2026</span> Lab House — ISO 2017 NABL Accredited Laboratory. All rights reserved.
+      </div>
+      <div class="flex items-center gap-6">
+        <a class="hover:text-teal-200 transition-colors" href="privacy-policy.html">Privacy Policy</a>
+        <a class="hover:text-teal-200 transition-colors" href="about.html#code-of-ethics">Code of Ethics</a>
+        <a class="hover:text-teal-200 transition-colors" href="about.html#quality-systems">Quality Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js?v=2.3"></script>
+  <script src="js/home.js"></script>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

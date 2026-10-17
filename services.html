@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accredited NABL Scope & Services | Lab House</title>
+  <meta name="description" content="Operating under ISO 2017 accreditation (Certificate CC-4341) and ALCOA+ data integrity principles across Permanent Laboratory and Site Facilities.">
+  <link rel="icon" href="assets/images/favicon.ico">
+
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,100..1000&family=Red+Hat+Display:wght@600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#005c55',
+            'primary-dark': '#004540',
+            'primary-container': '#0f766e',
+            accent: '#99F6E4',
+            orange: '#F97316',
+            'orange-hover': '#EA580C',
+            'bg-section': '#F0FDFA',
+            'text-primary': '#121c2a',
+            'text-secondary': '#475569',
+            'border-gray': '#D1D5DB',
+            'surface-teal': '#F0FDFA',
+            'surface-container-low': '#eff4ff',
+            'on-surface': '#121c2a',
+          },
+          fontFamily: {
+            heading: ['"Red Hat Display"', 'sans-serif'],
+            body: ['"Google Sans Flex"', '"Google Sans"', 'sans-serif'],
+            sans: ['"Google Sans Flex"', '"Google Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css?v=2.3">
+</head>
+<body class="min-h-full flex flex-col font-body bg-[#f8f9ff] text-[#121c2a]">
+
+  <!-- Header -->
+  <header class="bg-white sticky top-0 h-16 w-full z-50 border-b border-slate-200/80 shadow-xs text-slate-800 backdrop-blur-md bg-white/95">
+    <div class="flex justify-between items-center px-4 sm:px-6 md:px-8 w-full h-full max-w-7xl mx-auto">
+      <a class="flex items-center gap-2.5 hover:opacity-95 transition-opacity shrink-0" href="index.html">
+        <img src="assets/images/logo.png" alt="Lab House Logo" class="h-8 w-8 object-contain rounded-sm">
+        <div class="flex flex-col">
+          <span class="text-lg font-bold text-slate-900 tracking-tight leading-tight">Lab House</span>
+          <span class="text-[11px] font-semibold text-[#0F766E] flex items-center gap-1">
+            <span class="material-symbols-outlined text-[13px]">verified</span>
+            ISO 2017 NABL Accredited Laboratory
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex gap-7 h-full items-center text-[15px]">
+        <a class="nav-link text-slate-600 hover:text-[#0F766E] hover:border-b-2 hover:border-[#0F766E]/40 transition-all duration-200 ease-in-out h-full flex items-center" href="index.html">Home</a>
+        <a class="nav-link text-[#0F766E] font-semibold border-b-[3px] border-[#0F766E] pt-1 duration-200 ease-in-out h-full flex items-center" href="services.html">Services</a>
+        <a class="nav-link text-slate-600 hover:text-[#0F766E] hover:border-b-2 hover:border-[#0F766E]/40 transition-all duration-200 ease-in-out h-full flex items-center" href="about.html">About Us</a>
+        <a class="nav-link text-slate-600 hover:text-[#0F766E] hover:border-b-2 hover:border-[#0F766E]/40 transition-all duration-200 ease-in-out h-full flex items-center" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-5">
+        <a class="bg-[#EA580C] hover:bg-[#C2410C] text-white px-5 py-2.5 rounded-full font-semibold transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-sm text-[14px]" href="contact.html">
+          Get a Quote
+        </a>
+        <div class="w-px h-6 bg-slate-200"></div>
+        <a href="login.html" class="text-slate-700 hover:text-[#0F766E] font-medium transition-colors text-[14px] flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[18px]">login</span>
+          Client Login
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="md:hidden text-slate-700 hover:text-[#0F766E] p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#0F766E]" aria-label="Toggle Navigation">
+        <span id="mobile-menu-icon" class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+
+    <div id="mobile-drawer" class="mobile-drawer md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3 shadow-xl text-slate-800">
+      <div class="pb-2 border-b border-slate-100 flex items-center gap-1.5 text-xs font-semibold text-[#0F766E]">
+        <span class="material-symbols-outlined text-sm">verified</span>
+        ISO 2017 NABL Accredited Laboratory
+      </div>
+      <a class="mobile-nav-link block font-medium text-slate-600 hover:text-[#0F766E] py-1 pl-4" href="index.html">Home</a>
+      <a class="mobile-nav-link block font-semibold text-[#0F766E] py-1 border-l-4 border-[#0F766E] pl-3" href="services.html">Services</a>
+      <a class="mobile-nav-link block font-medium text-slate-600 hover:text-[#0F766E] py-1 pl-4" href="about.html">About Us</a>
+      <a class="mobile-nav-link block font-medium text-slate-600 hover:text-[#0F766E] py-1 pl-4" href="contact.html">Contact</a>
+      <div class="pt-2 flex flex-col gap-3">
+        <a class="block w-full text-center bg-[#EA580C] hover:bg-[#C2410C] text-white px-4 py-2.5 rounded-full font-semibold transition-colors shadow-md text-sm" href="contact.html">Get a Quote</a>
+        <a class="w-full flex items-center justify-center gap-2 border border-slate-200 hover:bg-slate-50 text-slate-700 px-4 py-2.5 rounded-full font-medium transition-colors text-sm" href="login.html">
+          <span class="material-symbols-outlined text-[18px]">login</span>
+          Client Login
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Hero Header -->
+    <section class="bg-[#0F766E] text-white py-10 md:py-12 px-6 md:px-10 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto relative z-10 space-y-2.5 text-center md:text-left">
+        <div class="inline-flex items-center gap-1.5 bg-white/15 px-3 py-0.5 rounded-full text-xs font-semibold text-teal-200 border border-white/25">
+          <span class="material-symbols-outlined text-sm">verified</span>
+          <span>ISO 2017 NABL Accredited Laboratory Scope</span>
+        </div>
+        <h1 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
+          Accredited NABL Scope &amp; Services
+        </h1>
+        <p class="font-body text-white text-sm sm:text-base max-w-3xl leading-relaxed">
+          Operating under ISO 2017 accreditation (Certificate CC-4341) and ALCOA+ data integrity principles across Permanent Laboratory and Site Facilities.
+        </p>
+      </div>
+      <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none w-72 h-72 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white to-transparent rounded-full translate-x-1/3 translate-y-1/3"></div>
+    </section>
+
+    <!-- ServicesTabsNav -->
+    <section class="bg-white border-b border-gray-200 sticky top-16 z-40 shadow-sm px-6">
+      <div class="max-w-7xl mx-auto flex flex-wrap gap-2.5 py-3 justify-center md:justify-start">
+        <button data-tab="nabl" class="tab-btn active flex items-center gap-2 px-4 py-2 rounded-full font-heading font-semibold text-xs sm:text-sm transition-all cursor-pointer">
+          <span class="material-symbols-outlined text-base">verified</span>
+          <span>1. NABL Scope in Services</span>
+        </button>
+        <button data-tab="calibration" class="tab-btn flex items-center gap-2 px-4 py-2 rounded-full font-heading font-semibold text-xs sm:text-sm transition-all cursor-pointer">
+          <span class="material-symbols-outlined text-base">straighten</span>
+          <span>2. Calibration Parameters</span>
+        </button>
+        <button data-tab="thermal" class="tab-btn flex items-center gap-2 px-4 py-2 rounded-full font-heading font-semibold text-xs sm:text-sm transition-all cursor-pointer">
+          <span class="material-symbols-outlined text-base">thermostat</span>
+          <span>3. Thermal Validation</span>
+        </button>
+        <button data-tab="hvac" class="tab-btn flex items-center gap-2 px-4 py-2 rounded-full font-heading font-semibold text-xs sm:text-sm transition-all cursor-pointer">
+          <span class="material-symbols-outlined text-base">air</span>
+          <span>4. HVAC Cleanroom</span>
+        </button>
+        <button data-tab="instruments" class="tab-btn flex items-center gap-2 px-4 py-2 rounded-full font-heading font-semibold text-xs sm:text-sm transition-all cursor-pointer">
+          <span class="material-symbols-outlined text-base">precision_manufacturing</span>
+          <span>5. Master Standards Table</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Tab 1: NablScopeSection -->
+    <div id="tab-nabl" class="services-tab-pane">
+      <section class="py-12 px-6 md:px-10 bg-slate-50 min-h-screen">
+        <div class="max-w-7xl mx-auto space-y-8">
+          <!-- View Mode Selector Tabs -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-slate-200 pb-4">
+            <div class="flex items-center gap-2 bg-white p-1.5 rounded-2xl border border-slate-200 shadow-sm w-full sm:w-auto">
+              <button id="view-mode-grid" class="view-toggle-btn active flex-1 sm:flex-none flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-heading text-xs sm:text-sm font-bold transition-all cursor-pointer">
+                <span class="material-symbols-outlined text-base">grid_view</span>
+                <span>1. NABL Scope in Services</span>
+              </button>
+              <button id="view-mode-table" class="view-toggle-btn flex-1 sm:flex-none flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-heading text-xs sm:text-sm font-bold transition-all cursor-pointer">
+                <span class="material-symbols-outlined text-base">table_chart</span>
+                <span>2. Official Accredited Scope Table (73 Parameters)</span>
+              </button>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-semibold text-slate-600">
+              <span class="material-symbols-outlined text-sm text-[#005c55]">verified</span>
+              <span>Validity: 26/03/2025 to 25/03/2029</span>
+            </div>
+          </div>
+
+          <!-- Cards Grid View -->
+          <div id="nabl-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Rendered by js/services.js -->
+          </div>
+
+          <!-- Table View Section (Search & Filter) -->
+          <div id="nabl-table-section" style="display: none;" class="space-y-6">
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
+              <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+                <div class="w-full md:w-96 relative">
+                  <span class="material-symbols-outlined absolute left-3 top-2.5 text-slate-400 text-lg">search</span>
+                  <input id="table-search-input" type="text" placeholder="Search by parameter, method, range..." class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-9 pr-4 py-2 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#005c55]">
+                </div>
+
+                <div class="flex flex-wrap items-center gap-2 text-xs font-semibold">
+                  <span class="text-slate-600">Facility:</span>
+                  <button class="facility-filter-btn px-3 py-1.5 rounded-lg border border-slate-200 bg-[#005c55] text-white cursor-pointer" data-facility="all">All</button>
+                  <button class="facility-filter-btn px-3 py-1.5 rounded-lg border border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100 cursor-pointer" data-facility="Permanent">Permanent</button>
+                  <button class="facility-filter-btn px-3 py-1.5 rounded-lg border border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100 cursor-pointer" data-facility="Site">Site</button>
+                </div>
+
+                <span id="scope-counter" class="text-xs font-bold text-[#004540] bg-teal-50 px-3 py-1.5 rounded-md border border-teal-200 font-mono">
+                  Loading...
+                </span>
+              </div>
+
+              <!-- Discipline Pills -->
+              <div class="flex flex-wrap items-center gap-2 pt-3 border-t border-slate-100 text-xs">
+                <span class="text-slate-600 font-medium">Discipline:</span>
+                <button class="discipline-pill px-2.5 py-1 rounded-md border border-slate-200 bg-[#005c55] text-white font-semibold cursor-pointer" data-discipline="all">All</button>
+                <button class="discipline-pill px-2.5 py-1 rounded-md border border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100 cursor-pointer" data-discipline="Electro-Technical">Electro-Technical</button>
+                <button class="discipline-pill px-2.5 py-1 rounded-md border border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100 cursor-pointer" data-discipline="Mechanical - Dimension">Dimension</button>
+                <button class="discipline-pill px-2.5 py-1 rounded-md border border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100 cursor-pointer" data-discipline="Mechanical - Pressure">Pressure</button>
+                <button class="discipline-pill px-2.5 py-1 rounded-md border border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100 cursor-pointer" data-discipline="Thermal - Humidity">Humidity</button>
+                <button class="discipline-pill px-2.5 py-1 rounded-md border border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100 cursor-pointer" data-discipline="Thermal - Temperature">Temperature</button>
+              </div>
+            </div>
+
+            <!-- Table -->
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+              <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse text-xs">
+                  <thead>
+                    <tr class="bg-[#005c55] text-white uppercase tracking-wider font-semibold">
+                      <th class="py-3 px-4 border-b border-white/10 w-12 text-center">S.No</th>
+                      <th class="py-3 px-4 border-b border-white/10 w-24">Facility</th>
+                      <th class="py-3 px-4 border-b border-white/10">Discipline</th>
+                      <th class="py-3 px-4 border-b border-white/10">Measurand / Instrument</th>
+                      <th class="py-3 px-4 border-b border-white/10">Calibration Method</th>
+                      <th class="py-3 px-4 border-b border-white/10">Range</th>
+                      <th class="py-3 px-4 border-b border-white/10">CMC (&plusmn;)</th>
+                    </tr>
+                  </thead>
+                  <tbody id="nabl-table-body" class="divide-y divide-slate-100">
+                    <!-- Populated by js/services.js -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="text-center pt-4">
+              <button id="load-more-btn" class="bg-white hover:bg-slate-50 text-[#005c55] border border-teal-300 font-bold px-6 py-2.5 rounded-full text-xs shadow-sm transition-all inline-flex items-center gap-1.5 cursor-pointer">
+                <span>Load More Parameters</span>
+                <span class="material-symbols-outlined text-sm">expand_more</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab 2: CalibrationScopeList -->
+    <div id="tab-calibration" class="services-tab-pane" style="display: none;">
+      <section class="py-16 px-6 md:px-10 bg-[#F0FDFA]">
+        <div class="max-w-7xl mx-auto space-y-10">
+          <div class="border-b border-gray-200 pb-6 flex flex-col sm:flex-row justify-between sm:items-center gap-4">
+            <div>
+              <span class="text-[#004540] font-bold text-xs uppercase tracking-wider bg-[#F0FDFA] px-3 py-1 rounded-full border border-teal-300">
+                ISO 2017 NABL Accredited Laboratory &amp; NABL Traceable
+              </span>
+              <h2 class="font-heading text-2xl sm:text-3xl font-bold text-[#121c2a] mt-2">
+                Comprehensive Calibration Scope (Key Parameters)
+              </h2>
+            </div>
+            <p class="text-sm text-[#475569] max-w-md">
+              All measurements are traceable to National and International Nodal Laboratories with unbroken measurement traceability.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="w-12 h-12 rounded-xl bg-[#F0FDFA] text-[#005c55] flex items-center justify-center font-bold">
+                    <span class="material-symbols-outlined text-2xl">speed</span>
+                  </div>
+                  <span class="text-xs font-mono font-bold bg-gray-100 text-gray-800 px-2.5 py-1 rounded border border-gray-200">-1 to 700 bar</span>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-[#121c2a]">Pressure &amp; Vacuum Calibration</h3>
+                <div class="text-xs font-bold text-[#004540] flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-base">verified</span>
+                  <span>High Precision Pneumatic &amp; Hydraulic</span>
+                </div>
+                <p class="font-body text-sm text-[#475569] leading-relaxed">
+                  Calibration of pressure gauges, vacuum sensors, differential pressure transmitters, and low pressure indicators using National Traceable Master Low Pressure Calibrators and Indicating Pressure Gauges.
+                </p>
+              </div>
+              <div class="pt-5 mt-5 border-t border-gray-100 flex items-center justify-between">
+                <span class="text-xs text-slate-600 font-medium">Standard &amp; Emergency Turnaround</span>
+                <a href="contact.html?instrument=Pressure%20Calibration" class="text-xs font-bold text-[#005c55] hover:underline flex items-center gap-1">
+                  <span>Get Quote</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="w-12 h-12 rounded-xl bg-[#F0FDFA] text-[#005c55] flex items-center justify-center font-bold">
+                    <span class="material-symbols-outlined text-2xl">thermostat</span>
+                  </div>
+                  <span class="text-xs font-mono font-bold bg-gray-100 text-gray-800 px-2.5 py-1 rounded border border-gray-200">-199.99°C to +1300°C</span>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-[#121c2a]">Temperature &amp; Thermal Calibration</h3>
+                <div class="text-xs font-bold text-[#004540] flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-base">verified</span>
+                  <span>±0.01°C to ±0.5°C Traceability</span>
+                </div>
+                <p class="font-body text-sm text-[#475569] leading-relaxed">
+                  NABL &amp; ISO accredited calibration for RTD Pt-100 sensors, S-Type thermocouples, digital thermometers, dry block calibrators, and deep freezers (-80°C to 50°C).
+                </p>
+              </div>
+              <div class="pt-5 mt-5 border-t border-gray-100 flex items-center justify-between">
+                <span class="text-xs text-slate-600 font-medium">Standard &amp; Emergency Turnaround</span>
+                <a href="contact.html?instrument=Temperature%20Calibration" class="text-xs font-bold text-[#005c55] hover:underline flex items-center gap-1">
+                  <span>Get Quote</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="w-12 h-12 rounded-xl bg-[#F0FDFA] text-[#005c55] flex items-center justify-center font-bold">
+                    <span class="material-symbols-outlined text-2xl">straighten</span>
+                  </div>
+                  <span class="text-xs font-mono font-bold bg-gray-100 text-gray-800 px-2.5 py-1 rounded border border-gray-200">Up to 600 mm (L.C. 0.001 mm)</span>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-[#121c2a]">Dimensional &amp; Mechanical Calibration</h3>
+                <div class="text-xs font-bold text-[#004540] flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-base">verified</span>
+                  <span>'0' Grade Master Traceability</span>
+                </div>
+                <p class="font-body text-sm text-[#475569] leading-relaxed">
+                  Precision verification of Vernier calipers, micrometers, height/depth gauges, dial indicators, and test plugs using Caliper Checkers, '0' Grade Gauge Blocks, and Granite Surface Plates.
+                </p>
+              </div>
+              <div class="pt-5 mt-5 border-t border-gray-100 flex items-center justify-between">
+                <span class="text-xs text-slate-600 font-medium">Standard &amp; Emergency Turnaround</span>
+                <a href="contact.html?instrument=Dimensional%20Calibration" class="text-xs font-bold text-[#005c55] hover:underline flex items-center gap-1">
+                  <span>Get Quote</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="w-12 h-12 rounded-xl bg-[#F0FDFA] text-[#005c55] flex items-center justify-center font-bold">
+                    <span class="material-symbols-outlined text-2xl">scale</span>
+                  </div>
+                  <span class="text-xs font-mono font-bold bg-gray-100 text-gray-800 px-2.5 py-1 rounded border border-gray-200">1 mg to 15 kg (E2 &amp; F1 Class)</span>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-[#121c2a]">Weights &amp; Weighing Scales Calibration</h3>
+                <div class="text-xs font-bold text-[#004540] flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-base">verified</span>
+                  <span>National NPL</span>
+                </div>
+                <p class="font-body text-sm text-[#475569] leading-relaxed">
+                  Calibration of analytical balances, precision industrial weighing scales, and mass comparators using calibrated E2 and F1 class standard stainless steel weights.
+                </p>
+              </div>
+              <div class="pt-5 mt-5 border-t border-gray-100 flex items-center justify-between">
+                <span class="text-xs text-slate-600 font-medium">Standard &amp; Emergency Turnaround</span>
+                <a href="contact.html?instrument=Weighing%20Scales" class="text-xs font-bold text-[#005c55] hover:underline flex items-center gap-1">
+                  <span>Get Quote</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="w-12 h-12 rounded-xl bg-[#F0FDFA] text-[#005c55] flex items-center justify-center font-bold">
+                    <span class="material-symbols-outlined text-2xl">bolt</span>
+                  </div>
+                  <span class="text-xs font-mono font-bold bg-gray-100 text-gray-800 px-2.5 py-1 rounded border border-gray-200">Voltage / Current / Resistance</span>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-[#121c2a]">Electrical &amp; Electro-Technical Calibration</h3>
+                <div class="text-xs font-bold text-[#004540] flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-base">verified</span>
+                  <span>IDEMI / Traceability</span>
+                </div>
+                <p class="font-body text-sm text-[#475569] leading-relaxed">
+                  Multi-parameter calibration for Digital Multimeters (DMMs), clamp meters, decade resistance boxes (0.01 Ω to 11.11 MΩ), power supplies, and process calibrators.
+                </p>
+              </div>
+              <div class="pt-5 mt-5 border-t border-gray-100 flex items-center justify-between">
+                <span class="text-xs text-slate-600 font-medium">Standard &amp; Emergency Turnaround</span>
+                <a href="contact.html?instrument=Electrical%20Calibration" class="text-xs font-bold text-[#005c55] hover:underline flex items-center gap-1">
+                  <span>Get Quote</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="w-12 h-12 rounded-xl bg-[#F0FDFA] text-[#005c55] flex items-center justify-center font-bold">
+                    <span class="material-symbols-outlined text-2xl">science</span>
+                  </div>
+                  <span class="text-xs font-mono font-bold bg-gray-100 text-gray-800 px-2.5 py-1 rounded border border-gray-200">0 to 14 pH / 0 to 200 mS/cm</span>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-[#121c2a]">pH &amp; Conductivity Calibration</h3>
+                <div class="text-xs font-bold text-[#004540] flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-base">verified</span>
+                  <span>Traceable Buffer Solutions</span>
+                </div>
+                <p class="font-body text-sm text-[#475569] leading-relaxed">
+                  Calibration and verification of benchtop and portable pH meters, conductivity meters, and TDS analyzers used in water purification and pharmaceutical quality control.
+                </p>
+              </div>
+              <div class="pt-5 mt-5 border-t border-gray-100 flex items-center justify-between">
+                <span class="text-xs text-slate-600 font-medium">Standard &amp; Emergency Turnaround</span>
+                <a href="contact.html?instrument=pH%20Calibration" class="text-xs font-bold text-[#005c55] hover:underline flex items-center gap-1">
+                  <span>Get Quote</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab 3: ThermalValidationList -->
+    <div id="tab-thermal" class="services-tab-pane" style="display: none;">
+      <section class="py-16 px-6 md:px-10 bg-[#F0FDFA]">
+        <div class="max-w-7xl mx-auto space-y-10">
+          <div class="border-b border-gray-200 pb-6 flex flex-col sm:flex-row justify-between sm:items-center gap-4">
+            <div>
+              <span class="text-[#004540] font-bold text-xs uppercase tracking-wider bg-[#F0FDFA] px-3 py-1 rounded-full border border-teal-300">
+                21 CFR Part 11 &amp; ALCOA Compliant
+              </span>
+              <h2 class="font-heading text-2xl sm:text-3xl font-bold text-[#121c2a] mt-2">
+                Thermal Validation Services (Controlled Environments)
+              </h2>
+            </div>
+            <p class="text-sm text-[#475569] max-w-md">
+              Utilizing high-accuracy wireless data loggers (-40 to 70°C, 0-100% RH) and wired thermocouple data loggers (-80 to +1200°C) with national/international traceability.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm flex items-start gap-4 hover:border-[#0F766E]/50 transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-[#0F766E]/10 text-[#005c55] font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">01</div>
+              <div class="space-y-1">
+                <h3 class="font-heading font-bold text-lg text-[#121c2a]">Area &amp; Warehouse Temperature Mapping</h3>
+                <p class="font-body text-sm text-[#475569]">Multi-point 3D spatial mapping across large storage facilities</p>
+                <div class="pt-2">
+                  <span class="inline-flex items-center gap-1 text-xs text-[#004540] font-semibold bg-[#F0FDFA] px-2.5 py-1 rounded border border-teal-300">
+                    <span class="material-symbols-outlined text-[14px]">sensors</span>
+                    <span>Traceable to National Standards (±0.5°C accuracy)</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm flex items-start gap-4 hover:border-[#0F766E]/50 transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-[#0F766E]/10 text-[#005c55] font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">02</div>
+              <div class="space-y-1">
+                <h3 class="font-heading font-bold text-lg text-[#121c2a]">Walk-in type Stability Chamber Validation</h3>
+                <p class="font-body text-sm text-[#475569]">0°C to 70°C and 0% to 100% RH loaded/unloaded qualification</p>
+                <div class="pt-2">
+                  <span class="inline-flex items-center gap-1 text-xs text-[#004540] font-semibold bg-[#F0FDFA] px-2.5 py-1 rounded border border-teal-300">
+                    <span class="material-symbols-outlined text-[14px]">sensors</span>
+                    <span>Traceable to National Standards (±0.5°C accuracy)</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm flex items-start gap-4 hover:border-[#0F766E]/50 transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-[#0F766E]/10 text-[#005c55] font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">03</div>
+              <div class="space-y-1">
+                <h3 class="font-heading font-bold text-lg text-[#121c2a]">Incubators &amp; Refrigerators Validation</h3>
+                <p class="font-body text-sm text-[#475569]">Uniformity and recovery testing for biological storage units</p>
+                <div class="pt-2">
+                  <span class="inline-flex items-center gap-1 text-xs text-[#004540] font-semibold bg-[#F0FDFA] px-2.5 py-1 rounded border border-teal-300">
+                    <span class="material-symbols-outlined text-[14px]">sensors</span>
+                    <span>Traceable to National Standards (±0.5°C accuracy)</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm flex items-start gap-4 hover:border-[#0F766E]/50 transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-[#0F766E]/10 text-[#005c55] font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">04</div>
+              <div class="space-y-1">
+                <h3 class="font-heading font-bold text-lg text-[#121c2a]">Cold Chamber / Cold Room Validation</h3>
+                <p class="font-body text-sm text-[#475569]">Extended duration temperature distribution and door-open recovery studies</p>
+                <div class="pt-2">
+                  <span class="inline-flex items-center gap-1 text-xs text-[#004540] font-semibold bg-[#F0FDFA] px-2.5 py-1 rounded border border-teal-300">
+                    <span class="material-symbols-outlined text-[14px]">sensors</span>
+                    <span>Traceable to National Standards (±0.5°C accuracy)</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm flex items-start gap-4 hover:border-[#0F766E]/50 transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-[#0F766E]/10 text-[#005c55] font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">05</div>
+              <div class="space-y-1">
+                <h3 class="font-heading font-bold text-lg text-[#121c2a]">Autoclaves Steam Sterilizer Validation</h3>
+                <p class="font-body text-sm text-[#475569]">Heat penetration and heat distribution studies with F0 lethality calculation</p>
+                <div class="pt-2">
+                  <span class="inline-flex items-center gap-1 text-xs text-[#004540] font-semibold bg-[#F0FDFA] px-2.5 py-1 rounded border border-teal-300">
+                    <span class="material-symbols-outlined text-[14px]">sensors</span>
+                    <span>Traceable to National Standards (±0.5°C accuracy)</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm flex items-start gap-4 hover:border-[#0F766E]/50 transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-[#0F766E]/10 text-[#005c55] font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">06</div>
+              <div class="space-y-1">
+                <h3 class="font-heading font-bold text-lg text-[#121c2a]">Ovens &amp; Furnaces Thermal Profiling</h3>
+                <p class="font-body text-sm text-[#475569]">High-temperature qualification for curing, drying, and annealing units</p>
+                <div class="pt-2">
+                  <span class="inline-flex items-center gap-1 text-xs text-[#004540] font-semibold bg-[#F0FDFA] px-2.5 py-1 rounded border border-teal-300">
+                    <span class="material-symbols-outlined text-[14px]">sensors</span>
+                    <span>Traceable to National Standards (±0.5°C accuracy)</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-r from-[#0F766E] to-[#0d625b] text-white p-8 rounded-2xl shadow flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="space-y-2">
+              <h4 class="font-heading font-bold text-xl">Need Comprehensive Thermal Mapping Protocol Preparation?</h4>
+              <p class="text-white text-sm max-w-2xl">We execute complete IQ, OQ, PQ protocols with spatial 3D mapping reports, risk assessment, and deviation summaries tailored for regulatory inspections.</p>
+            </div>
+            <a href="contact.html?instrument=Thermal%20Validation" class="bg-white text-[#004540] hover:bg-teal-50 font-bold px-6 py-3 rounded-full shadow transition-colors text-sm shrink-0">
+              Schedule Validation Visit
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab 4: HvacValidationList -->
+    <div id="tab-hvac" class="services-tab-pane" style="display: none;">
+      <section class="py-16 px-6 md:px-10 bg-[#F0FDFA]">
+        <div class="max-w-7xl mx-auto space-y-10">
+          <div class="border-b border-gray-200 pb-6 flex flex-col sm:flex-row justify-between sm:items-center gap-4">
+            <div>
+              <span class="text-[#004540] font-bold text-xs uppercase tracking-wider bg-[#F0FDFA] px-3 py-1 rounded-full border border-teal-300">
+                Cleanroom ISO 14644 Compliance
+              </span>
+              <h2 class="font-heading text-2xl sm:text-3xl font-bold text-[#121c2a] mt-2">
+                HVAC &amp; Cleanroom Validation Scope (Testing Protocols)
+              </h2>
+            </div>
+            <p class="text-sm text-[#475569] max-w-md">
+              Ensuring absolute environmental control and sterile processing conditions for pharmaceutical, biological, and electronic cleanrooms.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-4">
+              <div class="space-y-3">
+                <div class="w-12 h-12 rounded-xl bg-[#F0FDFA] text-[#005c55] flex items-center justify-center">
+                  <span class="material-symbols-outlined text-2xl">air</span>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-[#121c2a]">Airborne Particle Count (APC) Testing</h3>
+                <p class="font-body text-sm text-[#475569] leading-relaxed">
+                  Cleanroom classification and monitoring as per ISO 14644-1 standards using calibrated particle counters.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-[#005c55]">
+                <span>Aerosol Photometer / Particle Counter</span>
+                <span class="material-symbols-outlined text-base">verified_user</span>
+              </div>
+            </div>
+
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-4">
+              <div class="space-y-3">
+                <div class="w-12 h-12 rounded-xl bg-[#F0FDFA] text-[#005c55] flex items-center justify-center">
+                  <span class="material-symbols-outlined text-2xl">air</span>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-[#121c2a]">Filter Integrity Test (HEPA / ULPA)</h3>
+                <p class="font-body text-sm text-[#475569] leading-relaxed">
+                  PAO / DOP aerosol photometer testing to detect bypass, pinhole leaks, and filter efficiency in cleanrooms and biosafety cabinets.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-[#005c55]">
+                <span>Aerosol Photometer / Particle Counter</span>
+                <span class="material-symbols-outlined text-base">verified_user</span>
+              </div>
+            </div>
+
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-4">
+              <div class="space-y-3">
+                <div class="w-12 h-12 rounded-xl bg-[#F0FDFA] text-[#005c55] flex items-center justify-center">
+                  <span class="material-symbols-outlined text-2xl">air</span>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-[#121c2a]">Air Velocity &amp; Uniformity Testing</h3>
+                <p class="font-body text-sm text-[#475569] leading-relaxed">
+                  Measurement of laminar flow speed across filters to verify face velocity and ensure contamination barrier integrity.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-[#005c55]">
+                <span>Aerosol Photometer / Particle Counter</span>
+                <span class="material-symbols-outlined text-base">verified_user</span>
+              </div>
+            </div>
+
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-4">
+              <div class="space-y-3">
+                <div class="w-12 h-12 rounded-xl bg-[#F0FDFA] text-[#005c55] flex items-center justify-center">
+                  <span class="material-symbols-outlined text-2xl">air</span>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-[#121c2a]">Air Flow Pattern &amp; Visualization Studies</h3>
+                <p class="font-body text-sm text-[#475569] leading-relaxed">
+                  Smoke generation and video profiling to confirm laminar airflow direction and absence of stagnant turbulence pockets.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-[#005c55]">
+                <span>Aerosol Photometer / Particle Counter</span>
+                <span class="material-symbols-outlined text-base">verified_user</span>
+              </div>
+            </div>
+
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-4">
+              <div class="space-y-3">
+                <div class="w-12 h-12 rounded-xl bg-[#F0FDFA] text-[#005c55] flex items-center justify-center">
+                  <span class="material-symbols-outlined text-2xl">air</span>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-[#121c2a]">Air Balancing &amp; ACH Calculation</h3>
+                <p class="font-body text-sm text-[#475569] leading-relaxed">
+                  Air Changes per Hour (ACH) verification and room differential pressure balancing across cascading containment zones.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-[#005c55]">
+                <span>Aerosol Photometer / Particle Counter</span>
+                <span class="material-symbols-outlined text-base">verified_user</span>
+              </div>
+            </div>
+
+            <div class="bg-white border border border-[#D1D5DB] rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-4">
+              <div class="space-y-3">
+                <div class="w-12 h-12 rounded-xl bg-[#F0FDFA] text-[#005c55] flex items-center justify-center">
+                  <span class="material-symbols-outlined text-2xl">air</span>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-[#121c2a]">LAF / RLAF Workstation Validation</h3>
+                <p class="font-body text-sm text-[#475569] leading-relaxed">
+                  Complete qualification of Laminar Air Flow and Reverse Laminar Air Flow dispensing booths and sampling hoods.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-[#005c55]">
+                <span>Aerosol Photometer / Particle Counter</span>
+                <span class="material-symbols-outlined text-base">verified_user</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab 5: MasterInstrumentsTable -->
+    <div id="tab-instruments" class="services-tab-pane" style="display: none;">
+      <section class="py-16 px-6 md:px-10 bg-[#F0FDFA]">
+        <div class="max-w-7xl mx-auto space-y-8">
+          <div class="border-b border-gray-200 pb-6 flex flex-col sm:flex-row justify-between sm:items-center gap-4">
+            <div>
+              <span class="text-[#004540] font-bold text-xs uppercase tracking-wider bg-[#F0FDFA] px-3 py-1 rounded-full border border-teal-300">
+                Unbroken Measurement Traceability
+              </span>
+              <h2 class="font-heading text-2xl sm:text-3xl font-bold text-[#121c2a] mt-2">
+                Master Instruments &amp; Calibration Standards Table
+              </h2>
+            </div>
+            <p class="text-sm text-[#475569] max-w-md">
+              Below is our comprehensive roster of 37+ master calibrators across 25 primary designations maintained in our Vasai (E) facility.
+            </p>
+          </div>
+
+          <div class="bg-white border border border-[#D1D5DB] rounded-2xl overflow-hidden shadow-sm">
+            <div class="overflow-x-auto">
+              <table class="w-full text-left border-collapse">
+                <thead>
+                  <tr class="bg-[#005c55] text-white text-xs uppercase tracking-wider font-semibold">
+                    <th class="py-4 px-6 border-b border-white/10 w-16 text-center">S.No.</th>
+                    <th class="py-4 px-6 border-b border-white/10">Master Instrument / Calibration Standard</th>
+                    <th class="py-4 px-6 border-b border-white/10">Range / Specification &amp; Accuracy</th>
+                    <th class="py-4 px-6 border-b border-white/10">Calibration Agency / Traceability</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200 text-sm">
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">01</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Low Pressure Calibrator / Indicating Gauge</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">-1 to 40 bar / 0 to 700 bar</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">02</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Low Pressure Calibrator</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">-1 to 20 bar</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">03</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Indicating Pressure Gauge</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">0 to 700 bar</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">04</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Vacuum Gauge Standard</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">-1 to 0 bar</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">05</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Digital Thermometer with RTD Pt-100</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">-199.99°C to 199.99°C / -200°C to 850°C</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">International Traceable / ERTL (W)</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">06</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Temperature Master Sensors</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">-80°C to 300°C</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">International Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">07</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">RTD Pt-100 Sensor (3-Wire / 4-Wire)</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">-80°C to 300°C</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">08</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">S Type Thermocouples with Indicator</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">0°C to 1300°C</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">09</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Dry Block Temperature Calibrator</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">-35 to 123°C / 50 to 650°C</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">10</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Deep Freezer Facility</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">-80°C to 50°C</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">In-House Calibration Facility</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">11</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Decade Resistance Box</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">0.01 Ω to 11.11 MΩ</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable / ERTL (W)</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">12</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Digital Multimeter (6.5 Digit)</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">DC/AC Voltage, Current, Resistance, Frequency</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">International Traceable / IDEMI</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">13</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Digital Tachometer Master</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">6 to 99,999 RPM</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">14</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Digital Temperature &amp; Humidity Indicator</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">10% to 95% RH, 0°C to 60°C</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">International Traceable / ERTL (W)</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">15</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Digital Stopwatch / Timer Standard</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">Process Duration Verification</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">16</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Caliper Checker Master</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">Up to 600 mm</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">17</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Gauge Blocks ('0' Grade)</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">0.5 to 100 mm</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">18</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Granite Surface Plate ('0' Grade)</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">630 x 630 mm Flatness Standard</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">19</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Digital Vernier Caliper Standard</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">0 to 300 mm (L.C. 0.01 mm)</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">20</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Digital Micrometer Standard</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">0 to 25 mm (L.C. 0.001 mm)</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">21</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Dial Calibration Tester</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">0 to 25 mm (L.C. 0.001 mm)</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">22</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Standard Weights (E2 &amp; F1 Class)</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">1 mg to 15 kg (Analytical &amp; Industrial)</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">23</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">pH Meter &amp; Conductivity Standards</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">0-14 pH / 0-200 mS/cm Buffer Traceability</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">24</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Aerosol Photometer (PAO / DOP)</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">HEPA / ULPA Filter Integrity Verification</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable</span></td></tr>
+                  <tr class="hover:bg-[#F0FDFA]/60 transition-colors"><td class="py-3.5 px-6 text-center font-mono font-bold text-[#005c55]">25</td><td class="py-3.5 px-6 font-semibold text-[#121c2a]">Wireless &amp; Wired Data Loggers (21 CFR 11)</td><td class="py-3.5 px-6 font-mono text-xs text-[#475569]">-80°C to +1200°C / 0 to 100% RH</td><td class="py-3.5 px-6 font-medium text-gray-800"><span class="bg-[#F0FDFA] text-[#004540] px-2.5 py-1 rounded text-xs border border-teal-300 font-bold">National Traceable (±0.5°C)</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="bg-[#005c55] py-20 px-6 md:px-10 text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(153,246,228,0.12),transparent_60%)] pointer-events-none"></div>
+
+      <div class="max-w-5xl mx-auto text-center space-y-8 relative z-10">
+        <span class="inline-flex items-center gap-2 bg-white/15 text-teal-200 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full border border-white/25">
+          <span class="material-symbols-outlined text-[16px]">verified_user</span>
+          <span>ISO 2017 NABL Accredited Laboratory</span>
+        </span>
+
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight max-w-4xl mx-auto">
+          Need Custom Scope Verification or On-Site Calibration?
+        </h2>
+
+        <p class="font-body text-white text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
+          Our technical team responds within 2 hours. Speak directly with Mr. Hitesh P. Mehta or our Lab Incharge today.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+          <a href="contact.html" class="inline-flex items-center justify-center font-medium rounded-full transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] bg-[#EA580C] hover:bg-[#C2410C] text-white shadow-xl font-semibold text-base py-3.5 px-8">
+            Request Calibration Quote
+          </a>
+          <a href="tel:+919326050186" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-medium px-7 py-3.5 rounded-full border border-white/30 transition-all duration-200">
+            <span class="material-symbols-outlined text-lg">call</span>
+            <span>Call Direct: +91 9326050186 / +91 9225211221</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0F766E] text-white py-10 px-6 md:px-10 border-t border-white/10 font-body-sm mt-auto">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-white/20">
+      <div class="md:col-span-7 md:pr-10 md:border-r md:border-white/20">
+        <div class="flex items-center gap-2 mb-3">
+          <img src="assets/images/logo.png" alt="Lab House Logo" class="h-8 w-8 object-contain rounded-sm bg-white p-0.5">
+          <span class="font-heading font-bold text-xl text-white tracking-tight">Lab House</span>
+        </div>
+        <p class="text-white/95 text-[14px] leading-relaxed mb-4 max-w-sm">
+          ISO 2017 NABL Accredited Laboratory for Mechanical, Electro-Technical &amp; Thermal Discipline. Providing excellence in Calibration, Thermal Validation &amp; HVAC Validation since 1999.
+        </p>
+      </div>
+
+      <div class="md:col-span-5 md:pl-10">
+        <h4 class="font-heading font-semibold text-white text-[16px] mb-4 tracking-wide">Contact Us</h4>
+        <ul class="space-y-3 text-[14px] text-white/95">
+          <li class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-teal-200 text-[18px]">mail</span>
+            <a class="hover:text-teal-200 transition-colors" href="mailto:contact@labhouse.net">contact@labhouse.net</a>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="material-symbols-outlined text-teal-200 text-[18px] mt-0.5">call</span>
+            <div>
+              <a class="hover:text-teal-200 transition-colors block font-medium" href="tel:+919326050186">+91 9326050186 / +91 9225211221</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="material-symbols-outlined text-teal-200 text-[18px] mt-0.5">location_on</span>
+            <span>205, Tirupati Trade Centre, Navghar Road, Vasai (E), Dist: Palghar – 401208, Maharashtra, India</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px] text-white/90">
+      <div>&copy; <span id="current-year">2026</span> Lab House. All rights reserved.</div>
+      <div class="flex items-center gap-6">
+        <a class="hover:text-teal-200 transition-colors" href="privacy-policy.html">Privacy Policy</a>
+        <a class="hover:text-teal-200 transition-colors" href="about.html#code-of-ethics">Code of Ethics</a>
+        <a class="hover:text-teal-200 transition-colors" href="about.html#quality-systems">Quality Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js?v=2.3"></script>
+  <script src="js/services.js"></script>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,29 +1,20 @@
 {
   "name": "lab-house",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "description": "Lab House - ISO 2017 NABL Accredited Laboratory Website (Pure HTML5, Vanilla CSS & Vanilla JavaScript)",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "start": "npx -y serve .",
+    "dev": "npx -y serve .",
+    "serve": "npx -y serve ."
   },
-  "dependencies": {
-    "@supabase/supabase-js": "^2.110.7",
-    "next": "^16.2.12",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "resend": "^6.17.2",
-    "zod": "^4.4.3"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9.39.5",
-    "eslint-config-next": "^16.2.12",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+  "keywords": [
+    "calibration",
+    "thermal-validation",
+    "hvac-validation",
+    "nabl",
+    "iso-2017"
+  ],
+  "author": "Lab House",
+  "license": "UNLICENSED"
 }
