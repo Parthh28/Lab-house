@@ -51,24 +51,59 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenuIcon = document.getElementById("mobile-menu-icon");
 
   if (mobileMenuBtn && mobileDrawer) {
-    mobileMenuBtn.addEventListener("click", () => {
+    const closeDrawer = () => {
+      mobileDrawer.classList.remove("open");
+      mobileMenuBtn.setAttribute("aria-expanded", "false");
+      if (mobileMenuIcon) mobileMenuIcon.textContent = "menu";
+    };
+
+    const openDrawer = () => {
+      mobileDrawer.classList.add("open");
+      mobileMenuBtn.setAttribute("aria-expanded", "true");
+      if (mobileMenuIcon) mobileMenuIcon.textContent = "close";
+    };
+
+    mobileMenuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
       const isOpen = mobileDrawer.classList.contains("open");
       if (isOpen) {
-        mobileDrawer.classList.remove("open");
-        if (mobileMenuIcon) mobileMenuIcon.textContent = "menu";
+        closeDrawer();
       } else {
-        mobileDrawer.classList.add("open");
-        if (mobileMenuIcon) mobileMenuIcon.textContent = "close";
+        openDrawer();
       }
     });
 
     // Close on link click
     mobileDrawer.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
-        mobileDrawer.classList.remove("open");
-        if (mobileMenuIcon) mobileMenuIcon.textContent = "menu";
+        closeDrawer();
       });
     });
+
+    // Close when tapping/clicking outside the drawer
+    document.addEventListener("click", (e) => {
+      if (
+        mobileDrawer.classList.contains("open") &&
+        !mobileDrawer.contains(e.target) &&
+        !mobileMenuBtn.contains(e.target)
+      ) {
+        closeDrawer();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && mobileDrawer.classList.contains("open")) {
+        closeDrawer();
+      }
+    });
+
+    // Close on window resize to desktop breakpoint (>= 768px)
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 768 && mobileDrawer.classList.contains("open")) {
+        closeDrawer();
+      }
+    }, { passive: true });
   }
 
   // ── 4. Active Navigation Highlight ──
