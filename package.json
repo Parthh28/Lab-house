@@ -4,6 +4,8 @@
   "private": true,
   "description": "Lab House - ISO 2017 NABL Accredited Laboratory Website (Pure HTML5, Vanilla CSS & Vanilla JavaScript)",
   "scripts": {
+    "build": "echo 'Static build complete'",
+    "vercel-build": "echo 'Static site ready for deployment'",
     "start": "npx -y serve .",
     "dev": "npx -y serve .",
     "serve": "npx -y serve ."
