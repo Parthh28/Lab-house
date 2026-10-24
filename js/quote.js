@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  quoteForm.addEventListener("submit", (e) => {
+  quoteForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     clearErrors();
 
@@ -110,10 +110,10 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Bot honeypot detection
-    if (honeypot) {
-      console.warn("Spam bot detected via honeypot field.");
-    }
+    // ── Supabase Edge Function URL ──
+    // Replace with your actual project URL after deployment
+    const EDGE_FUNCTION_URL =
+      "https://zswyvicvnvltjilcwqwa.supabase.co/functions/v1/send-quote-email";
 
     // Loading state on button
     const submitBtn = document.getElementById("submit-btn");
@@ -124,16 +124,52 @@ document.addEventListener("DOMContentLoaded", () => {
       <span>Submitting...</span>
     `;
 
-    // Generate Customer ID and show modal
-    const randomSuffix = Math.floor(10000 + Math.random() * 90000);
-    const customerId = `CUST-${randomSuffix}`;
+    // Build payload
+    const payload = {
+      name,
+      company_name: company,
+      email,
+      phone,
+      instrument_type: instrumentType,
+      message: (document.getElementById("message")?.value || "").trim(),
+      website: honeypot, // honeypot — server silently drops if filled
+    };
 
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalBtnHtml;
+    try {
+      const response = await fetch(EDGE_FUNCTION_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
+      const result = await response.json();
+
+      if (!response.ok) {
+        // Server-side validation errors → show per-field
+        if (response.status === 400 && result.fieldErrors) {
+          Object.entries(result.fieldErrors).forEach(([field, msg]) => {
+            const uiField = field === "company_name" ? "company" : field === "instrument_type" ? "instrument" : field;
+            setFieldError(uiField, msg);
+          });
+          if (generalError) {
+            generalError.classList.remove("hidden");
+            generalError.classList.add("flex");
+            if (generalErrorText) generalErrorText.textContent = "Please correct the errors below.";
+          }
+        } else {
+          // Duplicate (409) or server error (500)
+          if (generalError) {
+            generalError.classList.remove("hidden");
+            generalError.classList.add("flex");
+            if (generalErrorText) generalErrorText.textContent = result.error || "Something went wrong. Please try again.";
+          }
+        }
+        return;
+      }
+
+      // ── Success ──
       if (modalCustomerId) {
-        modalCustomerId.textContent = customerId;
+        modalCustomerId.textContent = result.customerId || "—";
       }
 
       if (modal) {
@@ -141,7 +177,17 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       quoteForm.reset();
-    }, 600);
+    } catch (networkErr) {
+      console.error("Network error:", networkErr);
+      if (generalError) {
+        generalError.classList.remove("hidden");
+        generalError.classList.add("flex");
+        if (generalErrorText) generalErrorText.textContent = "Network error — please check your connection and try again.";
+      }
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnHtml;
+    }
   });
 
   if (modalCloseBtn && modal) {

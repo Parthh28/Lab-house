@@ -43,3 +43,8 @@ next-env.d.ts
 # Markdown files (keep internal docs hidden)
 *.md
 !README.md
+
+# supabase
+supabase/.temp/
+supabase/.branches/
+

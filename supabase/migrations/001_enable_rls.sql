@@ -9,6 +9,11 @@
 --   2. Allows public users to INSERT only (submit forms)
 --   3. Allows authenticated admin to read/update/delete
 --
+-- ⚠️  SUPERSEDED: The SELECT/UPDATE/DELETE policies below used
+--   auth.role() = 'authenticated' which grants access to ANY signed-in
+--   user, not just the admin.  Migration 002_restrict_admin_only.sql
+--   drops these and replaces them with app_metadata-based admin checks.
+--
 -- When you create contacts, email_logs, or settings tables later,
 -- come back and run the policies at the bottom of this file.
 -- ============================================================
@@ -20,16 +25,21 @@
 ALTER TABLE quote_requests ENABLE ROW LEVEL SECURITY;
 
 -- Public can only INSERT (submit a form) — nothing else
+DROP POLICY IF EXISTS "Public can submit quotes" ON quote_requests;
 CREATE POLICY "Public can submit quotes" ON quote_requests
   FOR INSERT WITH CHECK (true);
 
 -- Only authenticated users can read/update/delete
+-- ⚠️  SUPERSEDED by 002_restrict_admin_only.sql (admin-only via app_metadata)
+DROP POLICY IF EXISTS "Admin can read quotes" ON quote_requests;
 CREATE POLICY "Admin can read quotes" ON quote_requests
   FOR SELECT USING (auth.role() = 'authenticated');
 
+DROP POLICY IF EXISTS "Admin can update quotes" ON quote_requests;
 CREATE POLICY "Admin can update quotes" ON quote_requests
   FOR UPDATE USING (auth.role() = 'authenticated');
 
+DROP POLICY IF EXISTS "Admin can delete quotes" ON quote_requests;
 CREATE POLICY "Admin can delete quotes" ON quote_requests
   FOR DELETE USING (auth.role() = 'authenticated');
 
@@ -62,6 +72,8 @@ CREATE TABLE IF NOT EXISTS email_logs (
 );
 
 ALTER TABLE email_logs ENABLE ROW LEVEL SECURITY;
+-- ⚠️  SUPERSEDED by 002_restrict_admin_only.sql (admin-only via app_metadata)
+DROP POLICY IF EXISTS "Admin only - email_logs" ON email_logs;
 CREATE POLICY "Admin only - email_logs" ON email_logs
   FOR ALL USING (auth.role() = 'authenticated');
 
